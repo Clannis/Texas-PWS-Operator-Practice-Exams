@@ -81,7 +81,11 @@ function createTypes(user) {
                 typeList.appendChild(examlevel)
                 examlevel.addEventListener("click", (j) => {
                     adapter.createExam(user, e.target, j.target)
-                    .then(data => console.log(data))
+                    .then(data => {
+                        console.log(data)
+                        const exam = new Exam(data)
+                        console.log(exam)
+                    })
                 })
             }
         })
