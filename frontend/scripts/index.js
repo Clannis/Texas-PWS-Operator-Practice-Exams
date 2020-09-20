@@ -74,7 +74,6 @@ function createTypes(user) {
         examType.innerText = EXAMTYPES[i]
         typeList.appendChild(examType)
         examType.addEventListener("click", (e) => {
-            console.log(e.target.innerText)
             typeList.innerHTML = ""
             for (let i = 0; i < EXAMLICENSES.length; i++) {
                 const examlevel = document.createElement("li")
