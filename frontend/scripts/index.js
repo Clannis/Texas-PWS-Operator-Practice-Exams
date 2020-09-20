@@ -32,6 +32,7 @@ function renderUser(user) {
     const container = document.querySelector("div.container")
     container.innerHTML = ''
     const userName = document.createElement("h2")
+    userName.className = "username"
     userName.innerText = `${user.username}`
     container.appendChild(userName)
     const exams = document.createElement("div")

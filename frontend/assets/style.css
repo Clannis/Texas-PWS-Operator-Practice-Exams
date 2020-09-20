@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    margin: 0;
+    margin: 0px;
 }
 
 div.container {
@@ -68,4 +68,30 @@ ul.exam-list {
     background-color: crimson;
     cursor: pointer;
     box-shadow: 3px 3px rgb(58, 97, 182);
+}
+
+.username {
+    text-align: center;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    background-color: beige;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exam-container h3 {
+    text-align: center;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    background-color: beige;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
 }
