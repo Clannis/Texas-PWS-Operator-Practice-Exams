@@ -101,3 +101,24 @@ footer {
     width: 100%;
     text-align: center;
 }
+
+.exam-types {
+    display: flex;
+    list-style: none;
+}
+
+.exam-types li{
+    background-color: darkolivegreen;
+    border: black;
+    border-style: solid;
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+}
+
+.exam-types li:hover {
+    background-color: crimson;
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(58, 97, 182);
+}

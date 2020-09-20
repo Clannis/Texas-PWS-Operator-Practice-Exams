@@ -7,13 +7,29 @@ const adapter = {
       username: target.username.value
     }
     return fetch(`${API}/users`, {
-      method: 'POST', // or 'PUT'
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     })
     .then(response => response.json())
+  },
+
+  createExam: function(user, field, level) {
+    const data = {
+        id: user.id,
+        field: field.innerText,
+        license: level.innerText
+      }
+      return fetch(`${API}/exams`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
   }
 
 }
