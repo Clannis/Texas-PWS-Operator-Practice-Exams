@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+div.row1 {
+    display: flex;
+    height: 20%;
+}
+
+div.row2 {
+    display: flex;
+    height: 80%;
+}
+
+div.left-column {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    width: 20%;
+}
+
+div.right-column {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    width: 80%;
+}
+
+.top-left {
+    background-color: #2e3cbb;
+}
+
+.top-right {
+    background-color: firebrick;
+    
+}
+
+.bottom-left {
+    background-color: #2e3cbb;
+}
+
+.bottom-right {
+    background-color: dimgrey;
+}
