@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
         .then(data => {
             if (data.errors) {alert(data.errors)}
             else {
-                renderUser(data)
+                const user = new User(data)
+                renderUser(user)
             }
         })
         .catch((error) => {
@@ -27,5 +28,23 @@ document.addEventListener("DOMContentLoaded", (e) => {
 })
 
 function renderUser(user) {
-    console.log(user)
+    const container = document.querySelector("div.container")
+    container.innerHTML = ''
+    const userName = document.createElement("h2")
+    userName.innerText = `${user.username}`
+    container.appendChild(userName)
+    const exams = document.createElement("div")
+    exams.className = "exam-container"
+    container.appendChild(exams)
+    const examTitle = document.createElement("h3")
+    examTitle.innerText = "Your Exams"
+    exams.appendChild(examTitle)
+    const examList = document.createElement("ul")
+    examList.className = "exam-list"
+    exams.appendChild(examList)
+    user.exams.forEach(renderExams)
+}
+
+function renderExams(exam) {
+    const examList = document.querySelector("ul.exam-list")
 }
