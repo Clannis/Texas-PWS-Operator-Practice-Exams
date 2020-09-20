@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             if (data.errors) {alert(data.errors)}
             else {
                 const user = new User(data)
+                console.log(user)
                 renderUser(user)
             }
         })
@@ -42,7 +43,11 @@ function renderUser(user) {
     const examList = document.createElement("ul")
     examList.className = "exam-list"
     exams.appendChild(examList)
-    user.exams.forEach(renderExams)
+    // user.exams.forEach(renderExams)
+    const newExamButton = document.createElement("div")
+    newExamButton.className = "button"
+    newExamButton.innerText = "Take a new Exam"
+    container.appendChild(newExamButton)
 }
 
 function renderExams(exam) {

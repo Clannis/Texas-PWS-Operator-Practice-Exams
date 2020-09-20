@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_20_173754) do
+ActiveRecord::Schema.define(version: 2020_09_20_201744) do
+
+  create_table "exams", force: :cascade do |t|
+    t.string "license"
+    t.string "field"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "grade"
+    t.index ["user_id"], name: "index_exams_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -18,4 +28,5 @@ ActiveRecord::Schema.define(version: 2020_09_20_173754) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "exams", "users"
 end
