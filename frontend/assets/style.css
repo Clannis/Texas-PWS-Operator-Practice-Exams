@@ -95,3 +95,9 @@ ul.exam-list {
     margin-left: auto;
     margin-right: auto;
 }
+
+footer {
+    background-color: rgb(44, 135, 196);
+    width: 100%;
+    text-align: center;
+}
