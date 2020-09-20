@@ -14,6 +14,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
     form.addEventListener("submit" , (e) => {
         e.preventDefault()
         adapter.findOrCreateUser(e.target)
+        .then(data => {
+            if (data.errors) {alert(data.errors)}
+            else {
+                renderUser(data)
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error)
+        })
     })
 })
 
+function renderUser(user) {
+    console.log(user)
+}
