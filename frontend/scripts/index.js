@@ -168,10 +168,11 @@ function renderExam(exam) {
             <div class="bottom-right right-column">
                 <h1 class="question-number"></h1>
                 <div class="prompt-window">
-                    <div class="prompt">
-                    </div>
+                    <p class="prompt"></p>
                 </div>
                 <div class="answers-window">
+                    <form class="answers">
+                    </form>
                 </div>
             </div>
         </div>
@@ -192,4 +193,8 @@ function renderQuestion(question, index) {
     const examWindow = document.querySelector(".bottom-right")
     const questionNumber = document.querySelector(".question-number")
     questionNumber.innerHTML = `Question ${index+ 1} of 50`
+    const promt = document.querySelector(".prompt")
+    promt.innerText = `${question.prompt}`
+    const answers = document.querySelector(".answers")
+    
 }
