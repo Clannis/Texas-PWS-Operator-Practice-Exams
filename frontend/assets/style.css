@@ -75,6 +75,8 @@ li.exam-card {
     width: 125px;
     text-align: center;
     color: blanchedalmond;
+    float: right;
+    margin-right: 50px;
 }
 
 .button:hover {
