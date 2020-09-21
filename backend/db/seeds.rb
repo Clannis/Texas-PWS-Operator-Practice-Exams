@@ -15,7 +15,9 @@ Question.create(
     d: "Spent Water Recovery Cycle", 
     e: "Geological Cycle", 
     multiple_answers: false, 
-    difficulty_rating: 1
+    difficulty_rating: 1,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 2
 Question.create(
@@ -26,7 +28,9 @@ Question.create(
     d: "Ecological Hydrology", 
     e: "Environmental Abnormality", 
     multiple_answers: false, 
-    difficulty_rating: 1
+    difficulty_rating: 1,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 3
 Question.create(
@@ -37,7 +41,9 @@ Question.create(
     d: "Recharge Cycle", 
     e: "Water Table", 
     multiple_answers: false, 
-    difficulty_rating: 1
+    difficulty_rating: 1,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 4
 Question.create(
@@ -48,7 +54,9 @@ Question.create(
     d: "Rule of Eminent Domain", 
     e: "Rule of Capture & Ground Water Conservation Districts", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 5
 Question.create(
@@ -59,7 +67,9 @@ Question.create(
     d: "Texas Railroad Commission", 
     e: "Texas Department of Wildlife and Environmental Services", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 6
 Question.create(
@@ -70,7 +80,9 @@ Question.create(
     d: "Ecological Impact Assessment and Reform Act of 2000", 
     e: "None of the above", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 7
 Question.create(
@@ -81,7 +93,9 @@ Question.create(
     d: "Detailed Funding Mechanism for Infrastructure Replacement", 
     e: "Requirement for Water Conservation & Backflow Protection", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 8
 Question.create(
@@ -92,7 +106,9 @@ Question.create(
     d: "Serves at least 25 people daily at least 60 days of the year", 
     e: "All of the above", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 9
 Question.create(
@@ -103,7 +119,9 @@ Question.create(
     d: "Manufacturing Facilities, Commercial Food Processing, Meat Packers, Breweries", 
     e: "Apartment Complexes over 50 units, Restaurants, & Anywhere Alcohol is sold", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 10
 Question.create(
@@ -114,7 +132,9 @@ Question.create(
     d: "Thickness of Aquifer and Permiability of Media", 
     e: "Size of Well Casing & Horsepower of Motor Driving the Pump", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 11
 Question.create(
@@ -125,7 +145,9 @@ Question.create(
     d: "Critical Pumping Capacity", 
     e: "Well Drawdown", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 12
 Question.create(
@@ -136,7 +158,9 @@ Question.create(
     d: "2,216 GPM", 
     e: "5,958 GPM", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 13
 Question.create(
@@ -147,7 +171,9 @@ Question.create(
     d: "42,324,842 Gallons Pumped / 6,048,977 Average Gallons Per Day", 
     e: "Not enough information to correctly calculate", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 14
 Question.create(
@@ -158,7 +184,9 @@ Question.create(
     d: "Artesian Well", 
     e: "Ground Water Well Under The Influence", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 15
 Question.create(
@@ -169,7 +197,9 @@ Question.create(
     d: "150 feet", 
     e: "500 feet", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 16
 Question.create(
@@ -180,7 +210,9 @@ Question.create(
     d: "150 feet", 
     e: "500 feet", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 17
 Question.create(
@@ -191,7 +223,9 @@ Question.create(
     d: "250 / 150", 
     e: "500 / 50", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 18
 Question.create(
@@ -202,7 +236,9 @@ Question.create(
     d: "300 feet", 
     e: "500 feet", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 19
 Question.create(
@@ -213,7 +249,9 @@ Question.create(
     d: "A Rule of TAC Chapter 21", 
     e: "A Texas Supreme Court Ruling", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 20
 Question.create(
@@ -224,7 +262,9 @@ Question.create(
     d: "Driven", 
     e: "Jetted", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 21
 Question.create(
@@ -235,7 +275,9 @@ Question.create(
     d: "Mount the Motor", 
     e: "Establish Pumping Levels When Placed Into Production", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 22
 Question.create(
@@ -246,7 +288,9 @@ Question.create(
     d: "24 inches", 
     e: "36 inches", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 23
 Question.create(
@@ -257,7 +301,9 @@ Question.create(
     d: "Filled By Pressure Cement", 
     e: "Used As Air Gap So Well Can \"Breath\"", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 24
 Question.create(
@@ -268,7 +314,9 @@ Question.create(
     d: "Both B & C", 
     e: "All Of The Above", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 25
 Question.create(
@@ -279,7 +327,9 @@ Question.create(
     d: "Radius of Influence", 
     e: "Specific Capacity", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 26
 Question.create(
@@ -290,7 +340,9 @@ Question.create(
     d: "Radius of Influence", 
     e: "Specific Capacity", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 27
 Question.create(
@@ -301,7 +353,9 @@ Question.create(
     d: "Both A & C", 
     e: "Both B & C", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 28
 Question.create(
@@ -312,7 +366,9 @@ Question.create(
     d: "7 feet high / 1 strand / 8 feet high", 
     e: "8 feet high / 2 strands / 9 feet high", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 29
 Question.create(
@@ -323,7 +379,9 @@ Question.create(
     d: "Microorganism Contamination", 
     e: "Fecal Cyst Indicators", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 30
 Question.create(
@@ -334,7 +392,9 @@ Question.create(
     d: "Organic Bacteria / Inorganic Bacteria", 
     e: "Fecal Coliform Bacteria / Viral Coliform Bacteria", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 31
 Question.create(
@@ -345,7 +405,9 @@ Question.create(
     d: "Combined", 
     e: "Inert", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 32
 Question.create(
@@ -356,7 +418,9 @@ Question.create(
     d: "Combined", 
     e: "Inert", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 33
 Question.create(
@@ -367,7 +431,9 @@ Question.create(
     d: "Sodium and Potassium", 
     e: "Calcium and Magnesium", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 # 34
 Question.create(
@@ -378,7 +444,9 @@ Question.create(
     d: "Carbon Dioxide", 
     e: "Zinc and Copper", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #35
 Question.create(
@@ -389,7 +457,9 @@ Question.create(
     d: "Hepatitis and Poliomyelitis", 
     e: "None of the above", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #36
 Question.create(
@@ -400,7 +470,9 @@ Question.create(
     d: "Aeration", 
     e: "Absorption", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #37
 Question.create(
@@ -411,7 +483,9 @@ Question.create(
     d: "Methane, Hydrogen Sulfide, Carbon Monoxide, & Radon", 
     e: "Methane, Hydrogen Sulfide, Carbon Dioxide, & Xenon", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #38
 Question.create(
@@ -422,7 +496,9 @@ Question.create(
     d: "Taste, Odor, & Bicarbonates", 
     e: "Taste, Odor, & Inorganics", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #39
 Question.create(
@@ -433,7 +509,9 @@ Question.create(
     d: "Ozone", 
     e: "All are equal in strength", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #40
 Question.create(
@@ -444,7 +522,9 @@ Question.create(
     d: "Potassium or Ash", 
     e: "None of the above", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #41
 Question.create(
@@ -455,7 +535,9 @@ Question.create(
     d: "Filtration, Sedimentation, Flocculation, & Coagulation", 
     e: "Order makes no difference as long as all steps are performed", 
     multiple_answers: false, 
-    difficulty_rating: 5
+    difficulty_rating: 5,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #42
 Question.create(
@@ -466,7 +548,9 @@ Question.create(
     d: "Sulfides",
     e: "Low pH", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #43
 Question.create(
@@ -477,7 +561,9 @@ Question.create(
     d: "be filtered of impurities without increasing mineral content",
     e: "Be filtered of impurities but it increases mineral content", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #44
 Question.create(
@@ -488,7 +574,9 @@ Question.create(
     d: "Protozoa, Nematodes, Diatoms, Algae, Bacteria",
     e: "Both B & C", 
     multiple_answers: false, 
-    difficulty_rating: 5
+    difficulty_rating: 5,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #45
 Question.create(
@@ -499,7 +587,9 @@ Question.create(
     d: "Water Safe For Human Consumption",
     e: "Water Has Too Much Chlorine", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #46
 Question.create(
@@ -510,7 +600,9 @@ Question.create(
     d: "0.5 mg/L or 1.0 mg/L of Chloramine",
     e: "4.0 mg/L or 5.0 mg/L of Chloramine", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #47
 Question.create(
@@ -521,7 +613,9 @@ Question.create(
     d: "98% (2 log) / 99% (3 log) / 99.9% (4 log)",
     e: "99.999% (4 log) / 99.999% (4 log) / 99.999% (5 log)", 
     multiple_answers: false, 
-    difficulty_rating: 6
+    difficulty_rating: 6,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #48
 Question.create(
@@ -532,7 +626,9 @@ Question.create(
     d: "0.6 mg/L",
     e: "0.8 mg/L", 
     multiple_answers: false, 
-    difficulty_rating: 6
+    difficulty_rating: 6,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #49
 Question.create(
@@ -543,7 +639,9 @@ Question.create(
     d: "Chlorine Dioxide",
     e: "None of the above", 
     multiple_answers: false, 
-    difficulty_rating: 5
+    difficulty_rating: 5,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #50
 Question.create(
@@ -554,7 +652,9 @@ Question.create(
     d: "It does not have explosive properties",
     e: "Both B & D", 
     multiple_answers: false, 
-    difficulty_rating: 5
+    difficulty_rating: 5,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #51
 Question.create(
@@ -565,7 +665,9 @@ Question.create(
     d: "Demand / Residual / Dosage",
     e: "Residual / Demand / Dosage", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #52
 Question.create(
@@ -576,7 +678,9 @@ Question.create(
     d: "0.800 mg/L",
     e: "No MCL has been established", 
     multiple_answers: false, 
-    difficulty_rating: 6
+    difficulty_rating: 6,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #53
 Question.create(
@@ -587,7 +691,9 @@ Question.create(
     d: "0.60 mg/L",
     e: "No MCL has been established", 
     multiple_answers: false, 
-    difficulty_rating: 6
+    difficulty_rating: 6,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #54
 Question.create(
@@ -598,7 +704,9 @@ Question.create(
     d: "Settleable Solids",
     e: "Volatile Solids", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #55
 Question.create(
@@ -609,7 +717,9 @@ Question.create(
     d: "0.50%",
     e: "0.75%", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #56
 Question.create(
@@ -620,7 +730,9 @@ Question.create(
     d: "75%",
     e: "80%", 
     multiple_answers: false, 
-    difficulty_rating: 5
+    difficulty_rating: 5,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #57
 Question.create(
@@ -631,7 +743,9 @@ Question.create(
     d: "In lieu of",
     e: "None of the above", 
     multiple_answers: false, 
-    difficulty_rating: 6
+    difficulty_rating: 6,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #58
 Question.create(
@@ -642,7 +756,9 @@ Question.create(
     d: "Most likely single phasing",
     e: "Cavitating", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #59
 Question.create(
@@ -653,7 +769,9 @@ Question.create(
     d: "Malfunctioning Air Relief Valve & Partially closed gate valve",
     e: "All of the above", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #60
 Question.create(
@@ -664,7 +782,9 @@ Question.create(
     d: "Gear Reduction",
     e: "Diaphragm", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #61
 Question.create(
@@ -675,7 +795,9 @@ Question.create(
     d: "Elevations",
     e: "All of the above", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #62
 Question.create(
@@ -686,7 +808,9 @@ Question.create(
     d: "Squirrel Cage Induction",
     e: "None of the above", 
     multiple_answers: false, 
-    difficulty_rating: 4
+    difficulty_rating: 4,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #63
 Question.create(
@@ -697,7 +821,9 @@ Question.create(
     d: "Diaphragm",
     e: "Air induction", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #64
 Question.create(
@@ -708,7 +834,9 @@ Question.create(
     d: "Trains and educates the worker",
     e: "All of the above", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #65
 Question.create(
@@ -719,7 +847,9 @@ Question.create(
     d: "Not typically needed in most utility provider workplaces",
     e: "Both A & C", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #66
 Question.create(
@@ -730,7 +860,9 @@ Question.create(
     d: "The Texas One Call Society (TOCS)",
     e: "Both A & D", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #67
 Question.create(
@@ -741,7 +873,9 @@ Question.create(
     d: "7.6 mg/L",
     e: "Not enough information to calculate", 
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #68
 Question.create(
@@ -752,7 +886,9 @@ Question.create(
     d: "480",
     e: "Not enough information to calculate", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #69
 Question.create(
@@ -763,7 +899,9 @@ Question.create(
     d: "10.25 hours",
     e: "12.25 hours", 
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #70
 Question.create(
@@ -773,7 +911,9 @@ Question.create(
     c: "63 feet", 
     d: "167 feet",
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #71
 Question.create(
@@ -784,7 +924,9 @@ Question.create(
     d: "469,744 gallons",
     e: "4,697,400 gallons",
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #72
 Question.create(
@@ -795,7 +937,9 @@ Question.create(
     d: "84,250 gallons",
     e: "94,700 gallons",
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #73
 Question.create(
@@ -806,7 +950,9 @@ Question.create(
     d: "68.88 MGD",
     e: "Not enough information to calculate",
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #74
 Question.create(
@@ -816,7 +962,9 @@ Question.create(
     c: "12,510,000 pounds / 6,255 tons", 
     d: "125,100,000 pounds / 62,550 tons",
     multiple_answers: false, 
-    difficulty_rating: 2
+    difficulty_rating: 2,
+    license: "Class - C",
+    field: "Water Treatment"
 )
 #75
 Question.create(
@@ -827,5 +975,7 @@ Question.create(
     d: "229",
     e: "Not enough information to calculate",
     multiple_answers: false, 
-    difficulty_rating: 3
+    difficulty_rating: 3,
+    license: "Class - C",
+    field: "Water Treatment"
 )
