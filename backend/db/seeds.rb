@@ -558,7 +558,7 @@ Question.create(
 )
 #51
 Question.create(
-    prompt: "The ammount of chlorine used to reduce all bacteria and viruses is known as _________ once this is met, any additional chlorine added will produce a _________. These two added together will equal _________.", 
+    prompt: "The amount of chlorine used to reduce all bacteria and viruses is known as _________ once this is met, any additional chlorine added will produce a _________. These two added together will equal _________.", 
     a: "Demand / Dosage / Residual", 
     b: "Dosage / Demand/ Residual", 
     c: "Residual / Dosage / Demand", 

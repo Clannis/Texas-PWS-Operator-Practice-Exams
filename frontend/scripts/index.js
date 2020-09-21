@@ -177,6 +177,7 @@ function renderExam(exam) {
             </div>
         </div>
     `
+    renderSideNav()
     selectQuestion(exam, 0)
 }
 
@@ -240,4 +241,17 @@ function renderQuestion(exam, question, index) {
             selectQuestion(exam, parseInt(index) + 1)
         })
     }
+}
+
+function renderSideNav() {
+    const navWindow = document.querySelector(".bottom-left")
+    const navList = document.createElement("ul")
+    const examsPage = document.createElement("li")
+    examsPage.innerText = "Save & Go Back to Exams"
+    const questionList = document.createElement("li")
+    questionList.innerText = "List Questions"
+    const math = document.createElement("li")
+    math.innerText = "Equations & Conversions"
+    navList.append(examsPage, questionList, math)
+    navWindow.appendChild(navList)
 }
