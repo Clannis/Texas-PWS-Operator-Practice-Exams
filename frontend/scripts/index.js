@@ -137,7 +137,7 @@ function createLicenses(user, e) {
     const typeList = document.querySelector(".exam-types")
     for (let i = 0; i < EXAMLICENSES.length; i++) {
         const examlevel = document.createElement("li")
-        examlevel.innerText = `Class - ${EXAMLICENSES[i]`
+        examlevel.innerText = `Class - ${EXAMLICENSES[i]}`
         typeList.appendChild(examlevel)
         examlevel.addEventListener("click", (j) => {
             adapter.createExam(user, e.target, j.target)
