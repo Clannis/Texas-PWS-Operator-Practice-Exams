@@ -61,7 +61,6 @@ function renderLogIn() {
 function renderUser(data) {
     const user = new User(data)
     renderNav(user)
-    console.log(user)
     const container = document.querySelector("div.container")
     container.innerHTML = ''
     const userName = document.createElement("h2")
@@ -88,6 +87,7 @@ function renderUser(data) {
 function renderExamsList(exams) {
     exams.forEach(data => {
         const exam = new Exam(data)
+        console.log(exam)
         renderExamListItem(exam)
     })
 }
@@ -99,6 +99,7 @@ function renderExamListItem(exam) {
     li.innerHTML = `
         <p><strong>${exam.field} - Class ${exam.license}</strong></p>
         <p>Grade: ${exam.grade}</p>
+        <p>Started: ${exam.started()}</p>
     `
     examList.appendChild(li)
 }
