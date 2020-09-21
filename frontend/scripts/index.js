@@ -16,15 +16,14 @@ function renderNav(user) {
     exams.className = "nav-link"
     exams.innerText = "Exams"
     exams.addEventListener("click", (e) => {
-        adapter.findOrCreateUser(user.username).then(data => renderUser(data)
-        })
+        adapter.findOrCreateUser(user.username).then(data => renderUser(data))
     })
 
     nav.append(newUser, exams)
 }
 
 function renderLogIn() {
-    const nav = document.querySelector(".nav")
+    const nav = document.createElement("div")
     nav.innerHTML = ""
     const container = document.querySelector("div.container")
     container.innerHTML = ''
