@@ -194,19 +194,27 @@ function renderQuestion(question, index) {
     const questionNumber = document.querySelector(".question-number")
     questionNumber.innerHTML = `Question ${index+ 1} of 50`
     const promt = document.querySelector(".prompt")
-    promt.innerText = `${question.prompt}`
+    promt.innerText = `${question._prompt}`
     const answers = document.querySelector(".answers")
     answers.innerHTML = `
         <input type="radio" id ="a" name="selectedAnswer" value="a">
-        <label for="a">A: ${question.a}</label><br>
+        <label for="a">A: ${question._a}</label><br>
         <input type="radio" id ="b" name="selectedAnswer" value="b">
-        <label for="b">B: ${question.b}</label><br>
+        <label for="b">B: ${question._b}</label><br>
         <input type="radio" id ="c" name="selectedAnswer" value="c">
-        <label for="c">C: ${question.c}</label><br>
+        <label for="c">C: ${question._c}</label><br>
         <input type="radio" id ="d" name="selectedAnswer" value="d">
-        <label for="d">D: ${question.d}</label><br>
+        <label for="d">D: ${question._d}</label><br>
         <input type="radio" id ="e" name="selectedAnswer" value="e">
-        <label for="e">E: ${question.e}</label><br>
+        <label for="e">E: ${question._e}</label><br>
     `
+    const previousButton = document.createElement("div")
+    previousButton.className = "previous-button"
+    previousButton.innerText = "Previous"
+    examWindow.appendChild(previousButton)
+    const nextButton = document.createElement("div")
+    nextButton.className = "next-button"
+    nextButton.innerText = "Next"
+    examWindow.appendChild(nextButton)
     
 }
