@@ -1,15 +1,16 @@
 class Question {
     constructor(questionHash) {
-        this.id = questionHash.id
-        this.prompt = questionHash.prompt
-        this.a = questionHash.a
-        this.b = questionHash.b
-        this.c = questionHash.c
-        this.d = questionHash.d
-        this.e = questionHash.e
-        this.f = questionHash.f
-        this.multipleAnswers = questionHash.multiple_answers
-        this.difficultyRating = questionHash.difficulty_rating
-        this.category = questionHash.category
+        this._id = questionHash.id
+        this._prompt = questionHash.prompt
+        this._a = questionHash.a
+        this._b = questionHash.b
+        this._c = questionHash.c
+        this._d = questionHash.d
+        this._e = questionHash.e
+        this._f = questionHash.f
+        this._multipleAnswers = questionHash.multiple_answers
+        this._difficultyRating = questionHash.difficulty_rating
+        this._category = questionHash.category
+        this.selectedAnswer = ""
     }
 }
