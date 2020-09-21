@@ -50,7 +50,8 @@ div.right-column {
 }
 
 ul.exam-list {
-    display: flex;
+    display: flex;  
+    flex-wrap: wrap;
     list-style: none;
 }
 
