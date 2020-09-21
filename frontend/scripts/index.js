@@ -196,5 +196,17 @@ function renderQuestion(question, index) {
     const promt = document.querySelector(".prompt")
     promt.innerText = `${question.prompt}`
     const answers = document.querySelector(".answers")
-    
+    answers.innerHTML = `
+        <input type="radio" id ="a" name="selectedAnswer" value="a">
+        <label for="a">A: ${question.a}</label><br>
+        <input type="radio" id ="b" name="selectedAnswer" value="b">
+        <label for="b">B: ${question.b}</label><br>
+        <input type="radio" id ="c" name="selectedAnswer" value="c">
+        <label for="c">C: ${question.c}</label><br>
+        <input type="radio" id ="d" name="selectedAnswer" value="d">
+        <label for="d">D: ${question.d}</label><br>
+        <input type="radio" id ="e" name="selectedAnswer" value="e">
+        <label for="e">E: ${question.e}</label><br>
+    `
+
 }
