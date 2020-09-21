@@ -18,7 +18,7 @@ const adapter = {
 
   createExam: function(user, field, level) {
     const data = {
-        id: user.id,
+        user_id: user.id,
         field: field.innerText,
         license: level.innerText
       }
@@ -29,6 +29,11 @@ const adapter = {
         },
         body: JSON.stringify(data),
       })
+      .then(response => response.json())
+  },
+
+  getUsersExams: function(user) {
+      return fetch(`${API}/users/${user.id}/exams`)
       .then(response => response.json())
   }
 

@@ -47,7 +47,8 @@ function renderUser(user) {
     const examList = document.createElement("ul")
     examList.className = "exam-list"
     exams.appendChild(examList)
-    // user.exams.forEach(renderExams)
+    adapter.getUsersExams(user).then(renderExams)
+
     const newExamButton = document.createElement("div")
     newExamButton.className = "button"
     newExamButton.innerText = "Take a new Exam"
@@ -55,8 +56,22 @@ function renderUser(user) {
     newExamButton.addEventListener("click", () => createTypes(user))
 }
 
-function renderExams(exam) {
+function renderExams(exams) {
+    exams.forEach(data => {
+        const exam = new Exam(data)
+        renderExam(exam)
+    })
+}
+
+function renderExam(exam) {
     const examList = document.querySelector("ul.exam-list")
+    const li = document.createElement("li")
+    li.classList.add("exam-card")
+    li.innerHTML = `
+        <p><strong>${exam.field} - Class ${exam.license}</strong></p>
+        <p>Grade: ${exam.grade}</p>
+    `
+    examList.appendChild(li)
 }
 
 function createTypes(user) {
