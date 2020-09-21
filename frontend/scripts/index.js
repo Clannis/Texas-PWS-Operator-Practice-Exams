@@ -101,10 +101,10 @@ function renderExamListItem(exam) {
     deleteButton.innerText = "Delete"
     li.appendChild(deleteButton)
     deleteButton.addEventListener("click", () => adapter.removeExam(exam).then(() => {
-        li.remove()
-        exam.delete()
+        delete li
+        delete exam
     }))
-    li.addEventListener("click", () => renderExamListItem())
+    li.addEventListener("click", () => renderExam(exam))
 }
 
 function createTypes(user) {
@@ -140,5 +140,25 @@ function createTypes(user) {
 }
 
 function renderExam(exam) {
-    
+    const nav = document.createElement("div")
+    nav.innerHTML = ""
+    const container = document.querySelector("div.container")
+    container.innerHTML =` 
+        <div class="row1">
+            <div class="top-left left-column">
+                <h1 class="exam-title">${exam.field} - Class ${exam.license}</h1>
+            </div>
+            <div class="top-right right-column">
+                <h1>Test Time Progress</h1>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="bottom-left left-column">
+                <h1>Navigation</h1>
+            </div>
+            <div class="bottom-right right-column">
+                <h1>Test Window</h1>
+            </div>
+        </div>
+        `
 }

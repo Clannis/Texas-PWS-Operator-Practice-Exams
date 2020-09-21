@@ -4,7 +4,6 @@ class ExamsController < ApplicationController
         @exam = Exam.new(exam_params)
         @exam.user = User.find(params[:user_id])
         if @exam.save
-            byebug
             @exam.populate_questions
             render json: @exam
         else
