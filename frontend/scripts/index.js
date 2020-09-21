@@ -174,8 +174,6 @@ function renderExam(exam) {
                     <form class="answers">
                     </form>
                 </div>
-                <div class="exam-nav-buttons"
-                </div>
             </div>
         </div>
     `
@@ -183,63 +181,60 @@ function renderExam(exam) {
 }
 
 function selectQuestion(exam, index) {
-    console.log(index)
     renderQuestion(exam, exam.questions[index], index)
 }
 
 function renderQuestion(exam, question, index) {
-    const navButtons = document.querySelector(".exam-nav-buttons")
     const questionNumber = document.querySelector(".question-number")
     questionNumber.innerHTML = `Question ${index+ 1} of 50`
     const promt = document.querySelector(".prompt")
     promt.innerText = `${question._prompt}`
     const answers = document.querySelector(".answers")
-    answers.innerHTML = `
-        <input type="radio" id ="a" name="selectedAnswer" value="a">
-        <label for="a">A: ${question._a}</label><br>
-        <input type="radio" id ="b" name="selectedAnswer" value="b">
-        <label for="b">B: ${question._b}</label><br>
-        <input type="radio" id ="c" name="selectedAnswer" value="c">
-        <label for="c">C: ${question._c}</label><br>
-        <input type="radio" id ="d" name="selectedAnswer" value="d">
-        <label for="d">D: ${question._d}</label><br>
-    `
-    if (!!question._e) {
-        answers.innerHTML += `<input type="radio" id ="e" name="selectedAnswer" value="e">
-            <label for="e">E: ${question._e}</label><br></br>
-        `
+
+    for (let key in question.answers) {
+        if (!!question.answers[key]) {
+            if (question.selectedAnswer === key) {
+                answers.innerHTML += `
+                    <input type="radio" id ="${key}" name="selectedAnswer" value="${key}" checked>
+                    <label for="${key}">${key.toUpperCase()}: ${question.answers[key]}</label><br> 
+                `
+            } else {
+                answers.innerHTML += `
+                    <input type="radio" id ="${key}" name="selectedAnswer" value="${key}">
+                    <label for="${key}">${key.toUpperCase()}: ${question.answers[key]}</label><br> 
+                `
+            }
+        }   
     }
-    if (index > 0 && index < 50) {
-        const previousButton = document.createElement("div")
-        previousButton.className = "previous-button"
-        previousButton.innerText = "Previous"
-        navButtons.appendChild(previousButton)
+    const answersWindow = document.querySelector(".answers-window")
+    const nextButton = document.createElement("div")
+    const previousButton = document.createElement("div")
+    if (index !== 0) {
+        previousButton.className = "previous"
+        previousButton.innerText = "Save & Previous"
+        answersWindow.appendChild(previousButton)
         previousButton.addEventListener("click", () => {
-            question.selectQuestion = answers.value
-            previousButton.remove()
-            nextButton.remove()
+            question.selectedAnswer = document.forms[0].elements["selectedAnswer"].value
+            if (index !== 49) {
+                nextButton.parentNode.removeChild(nextButton)
+            }
+            previousButton.parentNode.removeChild(previousButton)
+            answers.innerHTML = ""
             selectQuestion(exam, parseInt(index) - 1)
         })
-        const nextButton = document.createElement("div")
-        nextButton.className = "next-button"
-        nextButton.innerText = "Next"
-        navButtons.appendChild(nextButton)
-        nextButton.addEventListener("click", () => {
-            question.selectQuestion = answers.value
-            navButtons.innerHTML = ""
-            selectQuestion(exam, parseInt(index) + 1)
-        })
-    } else if (index < 50) {
-        const nextButton = document.createElement("div")
-        nextButton.className = "next-button"
-        nextButton.innerText = "Next"
-        navButtons.appendChild(nextButton)
-        nextButton.addEventListener("click", () => {
-            question.selectQuestion = answers.value
-            navButtons.innerHTML = ""
-            selectQuestion(exam, parseInt(index) + 1)
-        })
-        
     }
-    
+    if (index !== 49) {
+        nextButton.className = "next"
+        nextButton.innerText = "Save & Next"
+        answersWindow.appendChild(nextButton)
+        nextButton.addEventListener("click", () => {
+            question.selectedAnswer = document.forms[0].elements["selectedAnswer"].value
+            answers.innerHTML = ""
+            nextButton.parentNode.removeChild(nextButton)
+            if (index !== 0) {
+                previousButton.parentNode.removeChild(previousButton)
+            }
+            selectQuestion(exam, parseInt(index) + 1)
+        })
+    }
 }
