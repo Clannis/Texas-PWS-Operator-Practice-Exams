@@ -123,24 +123,29 @@ function createTypes(user) {
         typeList.appendChild(examType)
         examType.addEventListener("click", (e) => {
             typeList.innerHTML = ""
-            for (let i = 0; i < EXAMLICENSES.length; i++) {
-                const examlevel = document.createElement("li")
-                examlevel.innerText = EXAMLICENSES[i]
-                typeList.appendChild(examlevel)
-                examlevel.addEventListener("click", (j) => {
-                    adapter.createExam(user, e.target, j.target)
-                    .then(data => {
-                        const exam = new Exam(data)
-                        renderExam(exam)
-                    })
-                })
-            }
+            createLicenses(user, e)
+        })
+    }
+}
+
+function createLicenses(user, e) {
+    const typeList = document.querySelector(".exam-types")
+    for (let i = 0; i < EXAMLICENSES.length; i++) {
+        const examlevel = document.createElement("li")
+        examlevel.innerText = EXAMLICENSES[i]
+        typeList.appendChild(examlevel)
+        examlevel.addEventListener("click", (j) => {
+            adapter.createExam(user, e.target, j.target)
+            .then(data => {
+                const exam = new Exam(data)
+                renderExam(exam)
+            })
         })
     }
 }
 
 function renderExam(exam) {
-    const nav = document.createElement("div")
+    const nav = document.querySelector(".nav")
     nav.innerHTML = ""
     const container = document.querySelector("div.container")
     container.innerHTML =` 
