@@ -208,5 +208,5 @@ function renderQuestion(question, index) {
         <input type="radio" id ="e" name="selectedAnswer" value="e">
         <label for="e">E: ${question.e}</label><br>
     `
-
+    
 }
