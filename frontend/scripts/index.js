@@ -205,16 +205,23 @@ function renderQuestion(question, index) {
         <label for="c">C: ${question._c}</label><br>
         <input type="radio" id ="d" name="selectedAnswer" value="d">
         <label for="d">D: ${question._d}</label><br>
-        <input type="radio" id ="e" name="selectedAnswer" value="e">
-        <label for="e">E: ${question._e}</label><br>
     `
-    const previousButton = document.createElement("div")
-    previousButton.className = "previous-button"
-    previousButton.innerText = "Previous"
-    examWindow.appendChild(previousButton)
-    const nextButton = document.createElement("div")
-    nextButton.className = "next-button"
-    nextButton.innerText = "Next"
-    examWindow.appendChild(nextButton)
+    if (!!question._e) {
+        answers.innerHTML += `<input type="radio" id ="e" name="selectedAnswer" value="e">
+            <label for="e">E: ${question._e}</label><br></br>
+        `
+    }
+    if (index > 0) {
+        const previousButton = document.createElement("div")
+        previousButton.className = "previous-button"
+        previousButton.innerText = "Previous"
+        examWindow.appendChild(previousButton)
+    }
+    if (index < 50) {
+        const nextButton = document.createElement("div")
+        nextButton.className = "next-button"
+        nextButton.innerText = "Next"
+        examWindow.appendChild(nextButton)
+    }
     
 }
