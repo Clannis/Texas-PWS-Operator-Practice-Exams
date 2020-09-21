@@ -165,3 +165,22 @@ footer {
     cursor: pointer;
     box-shadow: 3px 3px rgb(58, 97, 182);
 }
+
+.delete {
+    border-radius: 10px;
+    background-color: red;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 125px;
+    text-align: center;
+    color: blanchedalmond;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delete:hover {
+    background-color: rgb(99, 5, 143);
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(58, 97, 182);
+}

@@ -96,6 +96,10 @@ function renderExamListItem(exam) {
         <p>Started: ${exam.started()}</p>
     `
     examList.appendChild(li)
+    const deleteButton = document.createElement("p")
+    deleteButton.className = "delete"
+    deleteButton.innerText = "Delete"
+    li.appendChild(deleteButton)
     li.addEventListener("click", () => renderExamListItem())
 }
 
