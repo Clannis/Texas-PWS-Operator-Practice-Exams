@@ -96,6 +96,7 @@ function renderExamListItem(exam) {
         <p>Started: ${exam.started()}</p>
     `
     examList.appendChild(li)
+    li.addEventListener("click", () => renderExamListItem())
 }
 
 function createTypes(user) {
@@ -129,6 +130,8 @@ function createTypes(user) {
             }
         })
     }
-    
+}
 
+function renderExam(params) {
+    
 }
