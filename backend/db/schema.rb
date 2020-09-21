@@ -12,6 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2020_09_21_030625) do
 
+  create_table "exam_questions", force: :cascade do |t|
+    t.integer "exam_id"
+    t.integer "question_id"
+  end
+
   create_table "exams", force: :cascade do |t|
     t.string "license"
     t.string "field"
@@ -20,15 +25,6 @@ ActiveRecord::Schema.define(version: 2020_09_21_030625) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "grade"
     t.index ["user_id"], name: "index_exams_on_user_id"
-  end
-
-  create_table "exams_questions", id: false, force: :cascade do |t|
-    t.integer "exam_id", null: false
-    t.integer "question_id", null: false
-    t.integer "exams_id", null: false
-    t.integer "questions_id", null: false
-    t.index ["exams_id"], name: "index_exams_questions_on_exams_id"
-    t.index ["questions_id"], name: "index_exams_questions_on_questions_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -53,6 +49,4 @@ ActiveRecord::Schema.define(version: 2020_09_21_030625) do
   end
 
   add_foreign_key "exams", "users"
-  add_foreign_key "exams_questions", "exams", column: "exams_id"
-  add_foreign_key "exams_questions", "questions", column: "questions_id"
 end

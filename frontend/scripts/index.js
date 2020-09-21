@@ -100,6 +100,10 @@ function renderExamListItem(exam) {
     deleteButton.className = "delete"
     deleteButton.innerText = "Delete"
     li.appendChild(deleteButton)
+    deleteButton.addEventListener("click", () => adapter.removeExam(exam).then(() => {
+        li.remove()
+        exam.delete()
+    }))
     li.addEventListener("click", () => renderExamListItem())
 }
 

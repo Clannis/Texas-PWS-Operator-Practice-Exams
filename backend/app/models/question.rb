@@ -1,3 +1,4 @@
 class Question < ApplicationRecord
-    has_many :exams
+    has_many :exam_questions
+    has_many :exams, through: :exam_questions
 end

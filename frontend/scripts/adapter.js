@@ -35,6 +35,13 @@ const adapter = {
   getUsersExams: function(user) {
       return fetch(`${API}/users/${user.id}/exams`)
       .then(response => response.json())
+  },
+
+  removeExam: function(exam) {
+    return fetch(`${API}/exams/${exam.id}`, {
+      method: 'DELETE'
+    })
+    .then(response => response.json())
   }
 
 }
