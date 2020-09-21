@@ -52,6 +52,7 @@ div.right-column {
 
 .bottom-right {
     background-color: dimgrey;
+    float: left;
 }
 
 ul.exam-list {
@@ -211,4 +212,34 @@ footer {
 .exam-title{
     text-align: center;
     
+}
+
+.prompt-window {
+    display: flex;
+    width: 100%;
+}
+
+.answers-window {
+    display: flex;
+    width: 100%;
+}
+
+.nav-buttons {
+    display: flex;
+    float: right;
+    padding-top: 100px;
+    justify-content: space-between;
+}
+
+.nav-buttons div {
+    border-radius: 10px;
+    background-color: green;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 125px;
+    text-align: center;
+    color: blanchedalmond;
+    padding: 10px;
+    margin: 10px;
 }

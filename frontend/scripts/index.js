@@ -206,19 +206,22 @@ function renderQuestion(exam, question, index) {
             }
         }   
     }
-    const answersWindow = document.querySelector(".answers-window")
+    const bottomRight = document.querySelector(".bottom-right")
+    const navButtons = document.createElement("div")
+    navButtons.className = "nav-buttons"
+    bottomRight.appendChild(navButtons)
     const nextButton = document.createElement("div")
     const previousButton = document.createElement("div")
     if (index !== 0) {
         previousButton.className = "previous"
         previousButton.innerText = "Save & Previous"
-        answersWindow.appendChild(previousButton)
+        navButtons.appendChild(previousButton)
         previousButton.addEventListener("click", () => {
             question.selectedAnswer = document.forms[0].elements["selectedAnswer"].value
             if (index !== 49) {
                 nextButton.parentNode.removeChild(nextButton)
             }
-            previousButton.parentNode.removeChild(previousButton)
+            navButtons.parentNode.removeChild(navButtons)
             answers.innerHTML = ""
             selectQuestion(exam, parseInt(index) - 1)
         })
@@ -226,11 +229,11 @@ function renderQuestion(exam, question, index) {
     if (index !== 49) {
         nextButton.className = "next"
         nextButton.innerText = "Save & Next"
-        answersWindow.appendChild(nextButton)
+        navButtons.appendChild(nextButton)
         nextButton.addEventListener("click", () => {
             question.selectedAnswer = document.forms[0].elements["selectedAnswer"].value
             answers.innerHTML = ""
-            nextButton.parentNode.removeChild(nextButton)
+            navButtons.parentNode.removeChild(navButtons)
             if (index !== 0) {
                 previousButton.parentNode.removeChild(previousButton)
             }
