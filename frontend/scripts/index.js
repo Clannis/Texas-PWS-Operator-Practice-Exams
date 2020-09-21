@@ -174,23 +174,21 @@ function renderExam(exam) {
                     <form class="answers">
                     </form>
                 </div>
+                <div class="exam-nav-buttons"
+                </div>
             </div>
         </div>
     `
     selectQuestion(exam, 0)
 }
 
-function selectQuestion(exam, start) {
-    for (let question of exam.questions) {
-        if (question === exam.questions[start]) {
-            renderQuestion(question, start)
-        }
-    }
-    
+function selectQuestion(exam, index) {
+    console.log(index)
+    renderQuestion(exam, exam.questions[index], index)
 }
 
-function renderQuestion(question, index) {
-    const examWindow = document.querySelector(".bottom-right")
+function renderQuestion(exam, question, index) {
+    const navButtons = document.querySelector(".exam-nav-buttons")
     const questionNumber = document.querySelector(".question-number")
     questionNumber.innerHTML = `Question ${index+ 1} of 50`
     const promt = document.querySelector(".prompt")
@@ -211,17 +209,37 @@ function renderQuestion(question, index) {
             <label for="e">E: ${question._e}</label><br></br>
         `
     }
-    if (index > 0) {
+    if (index > 0 && index < 50) {
         const previousButton = document.createElement("div")
         previousButton.className = "previous-button"
         previousButton.innerText = "Previous"
-        examWindow.appendChild(previousButton)
-    }
-    if (index < 50) {
+        navButtons.appendChild(previousButton)
+        previousButton.addEventListener("click", () => {
+            question.selectQuestion = answers.value
+            previousButton.remove()
+            nextButton.remove()
+            selectQuestion(exam, parseInt(index) - 1)
+        })
         const nextButton = document.createElement("div")
         nextButton.className = "next-button"
         nextButton.innerText = "Next"
-        examWindow.appendChild(nextButton)
+        navButtons.appendChild(nextButton)
+        nextButton.addEventListener("click", () => {
+            question.selectQuestion = answers.value
+            navButtons.innerHTML = ""
+            selectQuestion(exam, parseInt(index) + 1)
+        })
+    } else if (index < 50) {
+        const nextButton = document.createElement("div")
+        nextButton.className = "next-button"
+        nextButton.innerText = "Next"
+        navButtons.appendChild(nextButton)
+        nextButton.addEventListener("click", () => {
+            question.selectQuestion = answers.value
+            navButtons.innerHTML = ""
+            selectQuestion(exam, parseInt(index) + 1)
+        })
+        
     }
     
 }
