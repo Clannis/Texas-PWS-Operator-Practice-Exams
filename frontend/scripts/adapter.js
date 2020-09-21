@@ -4,7 +4,7 @@ const adapter = {
 
   findOrCreateUser: function(target){
     const data = {
-      username: target.username.value
+      username: target
     }
     return fetch(`${API}/users`, {
       method: 'POST',

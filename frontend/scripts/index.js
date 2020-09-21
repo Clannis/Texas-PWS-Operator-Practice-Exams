@@ -5,7 +5,32 @@ document.addEventListener("DOMContentLoaded", () => {
     renderLogIn()
 })
 
+function renderNav(user) {
+    const nav = document.querySelector(".nav")
+    nav.innerHTML = ""
+    const newUser  = document.createElement("div")
+    newUser.className = "nav-link"
+    newUser.innerText = "New User"
+    newUser.addEventListener("click", () => renderLogIn())
+    const exams  = document.createElement("div")
+    exams.className = "nav-link"
+    exams.innerText = "Exams"
+    exams.addEventListener("click", (e) => {
+        adapter.findOrCreateUser(user.username)
+        .then(data => {
+            if (data.errors) {alert(data.errors)}
+            else {
+                renderUser(data)
+            }
+        })
+    })
+
+    nav.append(newUser, exams)
+}
+
 function renderLogIn() {
+    const nav = document.querySelector(".nav")
+    nav.innerHTML = ""
     const container = document.querySelector("div.container")
     container.innerHTML = ''
     const formTitle = document.createElement("h2")
@@ -20,7 +45,7 @@ function renderLogIn() {
     container.appendChild(form)
     form.addEventListener("submit" , (e) => {
         e.preventDefault()
-        adapter.findOrCreateUser(e.target)
+        adapter.findOrCreateUser(e.target.username.value)
         .then(data => {
             if (data.errors) {alert(data.errors)}
             else {
@@ -35,6 +60,7 @@ function renderLogIn() {
 
 function renderUser(data) {
     const user = new User(data)
+    renderNav(user)
     console.log(user)
     const container = document.querySelector("div.container")
     container.innerHTML = ''
