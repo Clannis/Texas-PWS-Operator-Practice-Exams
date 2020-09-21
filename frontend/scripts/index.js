@@ -178,7 +178,7 @@ function renderExam(exam) {
         </div>
     `
     renderSideNav()
-    selectQuestion(exam, 0)
+    selectQuestion(exam, exam.currentQuestion)
 }
 
 function selectQuestion(exam, index) {
@@ -224,7 +224,8 @@ function renderQuestion(exam, question, index) {
             }
             navButtons.parentNode.removeChild(navButtons)
             answers.innerHTML = ""
-            selectQuestion(exam, parseInt(index) - 1)
+            exam.currentQuestion -= 1
+            selectQuestion(exam, exam.currentQuestion)
         })
     }
     if (index !== 49) {
@@ -234,11 +235,12 @@ function renderQuestion(exam, question, index) {
         nextButton.addEventListener("click", () => {
             question.selectedAnswer = document.forms[0].elements["selectedAnswer"].value
             answers.innerHTML = ""
+            exam.currentQuestion += 1
             navButtons.parentNode.removeChild(navButtons)
             if (index !== 0) {
                 previousButton.parentNode.removeChild(previousButton)
             }
-            selectQuestion(exam, parseInt(index) + 1)
+            selectQuestion(exam, exam.currentQuestion)
         })
     }
 }
