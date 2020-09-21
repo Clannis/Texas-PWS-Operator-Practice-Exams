@@ -2,12 +2,12 @@ class CreateQuestions < ActiveRecord::Migration[6.0]
   def change
     create_table :questions do |t|
       t.string :prompt
-      t.string :answer_a
-      t.string :answer_b
-      t.string :answer_c
-      t.string :answer_d
-      t.string :answer_e
-      t.string :answer_f
+      t.string :a
+      t.string :b
+      t.string :c
+      t.string :d
+      t.string :e
+      t.string :f
       t.boolean :multiple_answers
       t.integer :difficulty_rating
       t.string :category
