@@ -11,6 +11,8 @@ class Exam {
             let question = new Question(questionHash)
             this.questions.push(question)
         })
+        this.completed = examHash.completed
+        this.currentQuestion = examHash.current_question
     }
 
     started() {
