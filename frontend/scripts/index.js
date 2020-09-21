@@ -1,7 +1,11 @@
 const EXAMTYPES = ["Water Treatment", "Wastewater Treatment"]
 const EXAMLICENSES = ["D", "C", "B"]
 
-document.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", () => {
+    renderLogIn()
+})
+
+function renderLogIn() {
     const container = document.querySelector("div.container")
     container.innerHTML = ''
     const formTitle = document.createElement("h2")
@@ -20,18 +24,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
         .then(data => {
             if (data.errors) {alert(data.errors)}
             else {
-                const user = new User(data)
-                console.log(user)
-                renderUser(user)
+                renderUser(data)
             }
         })
         .catch((error) => {
             console.error('Error:', error)
         })
     })
-})
+}
 
-function renderUser(user) {
+function renderUser(data) {
+    const user = new User(data)
+    console.log(user)
     const container = document.querySelector("div.container")
     container.innerHTML = ''
     const userName = document.createElement("h2")
@@ -47,8 +51,7 @@ function renderUser(user) {
     const examList = document.createElement("ul")
     examList.className = "exam-list"
     exams.appendChild(examList)
-    adapter.getUsersExams(user).then(renderExams)
-
+    adapter.getUsersExams(user).then(renderExamsList)
     const newExamButton = document.createElement("div")
     newExamButton.className = "button"
     newExamButton.innerText = "Take a new Exam"
@@ -56,14 +59,14 @@ function renderUser(user) {
     newExamButton.addEventListener("click", () => createTypes(user))
 }
 
-function renderExams(exams) {
+function renderExamsList(exams) {
     exams.forEach(data => {
         const exam = new Exam(data)
-        renderExam(exam)
+        renderExamListItem(exam)
     })
 }
 
-function renderExam(exam) {
+function renderExamListItem(exam) {
     const examList = document.querySelector("ul.exam-list")
     const li = document.createElement("li")
     li.classList.add("exam-card")
