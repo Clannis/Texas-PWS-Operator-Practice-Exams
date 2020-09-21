@@ -16,12 +16,7 @@ function renderNav(user) {
     exams.className = "nav-link"
     exams.innerText = "Exams"
     exams.addEventListener("click", (e) => {
-        adapter.findOrCreateUser(user.username)
-        .then(data => {
-            if (data.errors) {alert(data.errors)}
-            else {
-                renderUser(data)
-            }
+        adapter.findOrCreateUser(user.username).then(data => renderUser(data)
         })
     })
 

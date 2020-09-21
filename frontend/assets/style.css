@@ -138,3 +138,25 @@ footer {
     box-shadow: 3px 3px rgb(58, 97, 182);
 }
 
+.nav {
+    background-color: rgb(14, 56, 145);
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.nav-link {
+    background-color: darkolivegreen;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    background-color: crimson;
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(58, 97, 182);
+}
