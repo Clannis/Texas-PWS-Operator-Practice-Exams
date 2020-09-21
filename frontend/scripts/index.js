@@ -81,7 +81,6 @@ function renderUser(data) {
 function renderExamsList(exams) {
     exams.forEach(data => {
         const exam = new Exam(data)
-        console.log(exam)
         renderExamListItem(exam)
     })
 }
@@ -167,8 +166,30 @@ function renderExam(exam) {
                 <h1>Navigation</h1>
             </div>
             <div class="bottom-right right-column">
-                <h1>Test Window</h1>
+                <h1 class="question-number"></h1>
+                <div class="prompt-window">
+                    <div class="prompt">
+                    </div>
+                </div>
+                <div class="answers-window">
+                </div>
             </div>
         </div>
-        `
+    `
+    selectQuestion(exam, 0)
+}
+
+function selectQuestion(exam, start) {
+    for (let question of exam.questions) {
+        if (question === exam.questions[start]) {
+            renderQuestion(question, start)
+        }
+    }
+    
+}
+
+function renderQuestion(question, index) {
+    const examWindow = document.querySelector(".bottom-right")
+    const questionNumber = document.querySelector(".question-number")
+    questionNumber.innerHTML = `Question ${index+ 1} of 50`
 }
