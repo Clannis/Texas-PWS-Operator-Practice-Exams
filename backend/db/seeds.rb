@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+##########################################################################################################
+#                                                                                                        #
+#                                      Water Treatment Class - C                                         #
+#                                                                                                        #
+##########################################################################################################
 # 1
 q = Question.create(
     prompt: "The transfer or exchange of water between the earth and atmosphere is best described as:", 
