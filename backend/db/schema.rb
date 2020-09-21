@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_09_21_211906) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "grade"
     t.boolean "completed", default: false
-    t.integer "current_question"
+    t.integer "current_question", default: 0
     t.index ["user_id"], name: "index_exams_on_user_id"
   end
 
