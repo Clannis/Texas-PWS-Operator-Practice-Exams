@@ -96,15 +96,20 @@ function renderExamListItem(exam) {
         <p>Started: ${exam.started()}</p>
     `
     examList.appendChild(li)
+    const continueButton = document.createElement("p")
+    continueButton.className = "continue"
+    continueButton.innerText = "Continue Exam"
+    li.appendChild(continueButton)
+    continueButton.addEventListener("click", () => renderExam(exam))
     const deleteButton = document.createElement("p")
     deleteButton.className = "delete"
     deleteButton.innerText = "Delete"
     li.appendChild(deleteButton)
     deleteButton.addEventListener("click", () => adapter.removeExam(exam).then(() => {
-        delete li
+        li.remove()
         delete exam
     }))
-    li.addEventListener("click", () => renderExam(exam))
+    
 }
 
 function createTypes(user) {
@@ -132,7 +137,7 @@ function createLicenses(user, e) {
     const typeList = document.querySelector(".exam-types")
     for (let i = 0; i < EXAMLICENSES.length; i++) {
         const examlevel = document.createElement("li")
-        examlevel.innerText = EXAMLICENSES[i]
+        examlevel.innerText = `Class - ${EXAMLICENSES[i]`
         typeList.appendChild(examlevel)
         examlevel.addEventListener("click", (j) => {
             adapter.createExam(user, e.target, j.target)
