@@ -4,7 +4,7 @@ class ExamsController < ApplicationController
         @exam = Exam.new(exam_params)
         @exam.user = User.find(params[:user_id])
         if @exam.save
-            @exam.populate_questions
+            @exam.populate_questions(params[:exam][:field], params[:exam][:license])
             render json: @exam
         else
             render json: {errors: @exam.errors.full_messages.to_sentence}, status: 418
