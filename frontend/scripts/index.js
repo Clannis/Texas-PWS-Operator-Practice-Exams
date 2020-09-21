@@ -130,9 +130,8 @@ function createTypes(user) {
                 examlevel.addEventListener("click", (j) => {
                     adapter.createExam(user, e.target, j.target)
                     .then(data => {
-                        console.log(data)
                         const exam = new Exam(data)
-                        console.log(exam)
+                        renderExam(exam)
                     })
                 })
             }
@@ -140,6 +139,6 @@ function createTypes(user) {
     }
 }
 
-function renderExam(params) {
+function renderExam(exam) {
     
 }

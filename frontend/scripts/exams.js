@@ -6,6 +6,11 @@ class Exam {
         this.grade = !!examHash.grade ? examHash.grade : "Not yet completed"
         this.userId = examHash.user.id
         this.startedAt = examHash.created_at
+        this.questions = []
+        examHash.questions.forEach((questionHash) => {
+            let question = new Question(questionHash)
+            this.questions.push(question)
+        })
     }
 
     started() {
