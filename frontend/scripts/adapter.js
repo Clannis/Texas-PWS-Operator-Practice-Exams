@@ -53,14 +53,16 @@ const adapter = {
         questions: []
       }
     }
-    exam.questions.forEach((question) => {
+
+    for (let i = 0; i < exam.currentQuestion; i++) {
+      console.log(exam.questions[i])
       questionHash = {
-        id: question.id,
-        selected_answer: question.selectedAnswer
+        id: exam.questions[i].id,
+        selected_answer: exam.questions[i].selectedAnswer
       }
       data.exam.questions.push(questionHash)
-    })
-    console.log(data)
+    }
+
     return fetch(`${API}/exams/${exam.id}`, {
       method: 'PATCH',
       headers: {

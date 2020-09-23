@@ -259,6 +259,7 @@ function renderSideNav(exam) {
     navList.append(examsPage, questionList, math)
     navWindow.appendChild(navList)
     examsPage.addEventListener("click", () => {
+        exam.currentQuestion += 1
         exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
         adapter.updateExam(exam)
         .then()
