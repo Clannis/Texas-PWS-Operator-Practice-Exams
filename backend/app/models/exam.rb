@@ -1,7 +1,8 @@
 class Exam < ApplicationRecord
   belongs_to :user
-  has_many :exam_exam_questions
-  has_many :exam_questions, through: :exam_exam_questions
+  has_many :exam_questions
+
+  before_destroy :destroy_exam_questions
 
   def populate_questions(field, license)
     class_questions = Question.questions_per_exam(field, license)
@@ -22,9 +23,16 @@ class Exam < ApplicationRecord
         field: class_questions[id].field
       )
       if question && !self.exam_questions.include?(question)
-          self.exam_questions << question
+        question.save
+        self.exam_questions << question
       end
     end
+  end
+
+  private
+
+  def destroy_exam_questions
+    self.exam_questions.destroy_all   
   end
   
 end

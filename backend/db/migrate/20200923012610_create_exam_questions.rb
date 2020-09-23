@@ -13,6 +13,7 @@ class CreateExamQuestions < ActiveRecord::Migration[6.0]
       t.string :category
       t.string :license
       t.string :field
+      t.belongs_to :exam, null: false, foreign_key: true
 
       t.timestamps
     end

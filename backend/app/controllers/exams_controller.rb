@@ -24,18 +24,17 @@ class ExamsController < ApplicationController
 
     def destroy
         @exam = Exam.find(params[:id])
-        @exam.destroy()
+        @exam.destroy
         render json: {message: "Your exam has been removed!"}
     end
 
     def update
         @exam = Exam.find_by(id: params[:exam][:id])
         params[:exam][:questions].each do |param_question|
-            @exam.questions.each do |exam_question|
-                question = Question.find_by(id: param_question[:id])
-                byebug
+            @exam.exam_questions.each do |exam_question|
+                question = ExamQuestion.find_by(id: param_question[:id])
                 if question == exam_question
-                    
+                    question.update(param_question)
                 end
             end
         end

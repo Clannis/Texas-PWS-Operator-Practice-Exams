@@ -19,13 +19,6 @@ ActiveRecord::Schema.define(version: 2020_09_23_012610) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "exam_exam_questions", force: :cascade do |t|
-    t.integer "exam_id"
-    t.integer "exam_question_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "exam_questions", force: :cascade do |t|
     t.string "prompt"
     t.string "a"
@@ -39,8 +32,10 @@ ActiveRecord::Schema.define(version: 2020_09_23_012610) do
     t.string "category"
     t.string "license"
     t.string "field"
+    t.integer "exam_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["exam_id"], name: "index_exam_questions_on_exam_id"
   end
 
   create_table "exams", force: :cascade do |t|
@@ -78,5 +73,6 @@ ActiveRecord::Schema.define(version: 2020_09_23_012610) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "exam_questions", "exams"
   add_foreign_key "exams", "users"
 end

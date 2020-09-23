@@ -142,6 +142,7 @@ function createLicenses(user, e) {
         examlevel.addEventListener("click", (j) => {
             adapter.createExam(user, e.target, j.target)
             .then(data => {
+                console.log(data)
                 const exam = new Exam(data)
                 renderExam(exam)
             })
