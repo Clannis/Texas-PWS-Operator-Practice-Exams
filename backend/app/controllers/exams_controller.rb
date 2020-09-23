@@ -33,12 +33,9 @@ class ExamsController < ApplicationController
         params[:exam][:questions].each do |param_question|
             @exam.exam_questions.each do |exam_question|
                 question = ExamQuestion.find_by(id: param_question[:id])
-                if question == exam_question
-                    question.update(param_question)
-                end
+                question.update(id: param_question[:id], selected_answer: param_question[:selected_answer])
             end
         end
-        byebug
     end
 
     private
@@ -46,4 +43,8 @@ class ExamsController < ApplicationController
     def exam_params
         params.require(:exam).permit(:field, :license)
     end
+
+    # def question_params
+    #     params.require(:exam).require(:questions).permit(:id, :selected_answer)
+    # end
 end

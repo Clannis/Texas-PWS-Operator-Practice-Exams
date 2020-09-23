@@ -46,8 +46,21 @@ const adapter = {
 
   updateExam: function(exam) {
     const data = {
-      exam: exam
+      exam: {
+        id: exam.id,
+        user_id: exam.userId,
+        current_question: exam.currentQuestion,
+        questions: []
+      }
     }
+    exam.questions.forEach((question) => {
+      questionHash = {
+        id: question.id,
+        selected_answer: question.selectedAnswer
+      }
+      data.exam.questions.push(questionHash)
+    })
+    console.log(data)
     return fetch(`${API}/exams/${exam.id}`, {
       method: 'PATCH',
       headers: {

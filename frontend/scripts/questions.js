@@ -11,7 +11,7 @@ class Question {
             f: questionHash.f
         }
         this.license = questionHash.license
-        this.field - questionHash.field
+        this.field = questionHash.field
         this.multipleAnswers = questionHash.multiple_answers
         this.difficultyRating = questionHash.difficulty_rating
         this.category = questionHash.category
