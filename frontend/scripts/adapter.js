@@ -53,8 +53,8 @@ const adapter = {
         questions: []
       }
     }
-
-    for (let i = 0; i < exam.currentQuestion; i++) {
+    console.log(exam.currentQuestion)
+    for (let i = 0; i < exam.currentQuestion+1; i++) {
       console.log(exam.questions[i])
       questionHash = {
         id: exam.questions[i].id,

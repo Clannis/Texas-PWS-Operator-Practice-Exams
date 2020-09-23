@@ -33,8 +33,8 @@ class ExamsController < ApplicationController
         params[:exam][:questions].each do |param_question|
             question = ExamQuestion.find_by(id: param_question[:id])
             question.update(id: param_question[:id], selected_answer: param_question[:selected_answer])
-            byebug
         end
+        render json: @exam
     end
 
     private
