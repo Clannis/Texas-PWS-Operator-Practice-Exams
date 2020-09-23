@@ -142,7 +142,6 @@ function createLicenses(user, e) {
         examlevel.addEventListener("click", (j) => {
             adapter.createExam(user, e.target, j.target)
             .then(data => {
-                console.log(data)
                 const exam = new Exam(data)
                 renderExam(exam)
             })
@@ -261,7 +260,6 @@ function renderSideNav(exam) {
     examsPage.addEventListener("click", () => {
         exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
         adapter.updateExam(exam)
-        .then(data => console.log(data))
-        renderUser(USER)
+        .then(() => renderUser(USER))
     })
 }

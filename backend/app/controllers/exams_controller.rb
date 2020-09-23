@@ -34,7 +34,7 @@ class ExamsController < ApplicationController
             question = ExamQuestion.find_by(id: param_question[:id])
             question.update(id: param_question[:id], selected_answer: param_question[:selected_answer])
         end
-        render json: @exam
+        render json: {message: "Your exam has been saved!"}
     end
 
     private
@@ -42,8 +42,4 @@ class ExamsController < ApplicationController
     def exam_params
         params.require(:exam).permit(:field, :license)
     end
-
-    # def question_params
-    #     params.require(:exam).require(:questions).permit(:id, :selected_answer)
-    # end
 end
