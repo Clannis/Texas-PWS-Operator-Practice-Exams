@@ -1,5 +1,6 @@
 const EXAMTYPES = ["Water Treatment", "Wastewater Treatment"]
 const EXAMLICENSES = ["D", "C", "B"]
+let USER = ""
 
 document.addEventListener("DOMContentLoaded", () => {
     renderLogIn()
@@ -43,7 +44,8 @@ function renderLogIn() {
         .then(data => {
             if (data.errors) {alert(data.errors)}
             else {
-                renderUser(data)
+                USER = new User(data)
+                renderUser(USER)
             }
         })
         .catch((error) => {
@@ -52,8 +54,7 @@ function renderLogIn() {
     })
 }
 
-function renderUser(data) {
-    const user = new User(data)
+function renderUser(user) {
     renderNav(user)
     const container = document.querySelector("div.container")
     container.innerHTML = ''
@@ -177,7 +178,7 @@ function renderExam(exam) {
             </div>
         </div>
     `
-    renderSideNav()
+    renderSideNav(exam)
     selectQuestion(exam, exam.currentQuestion)
 }
 
@@ -189,7 +190,7 @@ function renderQuestion(exam, question, index) {
     const questionNumber = document.querySelector(".question-number")
     questionNumber.innerHTML = `Question ${index+ 1} of 50`
     const promt = document.querySelector(".prompt")
-    promt.innerText = `${question._prompt}`
+    promt.innerText = `${question.prompt}`
     const answers = document.querySelector(".answers")
 
     for (let key in question.answers) {
@@ -245,7 +246,7 @@ function renderQuestion(exam, question, index) {
     }
 }
 
-function renderSideNav() {
+function renderSideNav(exam) {
     const navWindow = document.querySelector(".bottom-left")
     const navList = document.createElement("ul")
     const examsPage = document.createElement("li")
@@ -256,4 +257,10 @@ function renderSideNav() {
     math.innerText = "Equations & Conversions"
     navList.append(examsPage, questionList, math)
     navWindow.appendChild(navList)
+    examsPage.addEventListener("click", () => {
+        exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
+        adapter.updateExam(exam)
+        .then()
+        renderUser(USER)
+    })
 }

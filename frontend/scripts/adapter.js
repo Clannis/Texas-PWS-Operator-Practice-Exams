@@ -42,6 +42,20 @@ const adapter = {
       method: 'DELETE'
     })
     .then(response => response.json())
+  },
+
+  updateExam: function(exam) {
+    const data = {
+      exam: exam
+    }
+    return fetch(`${API}/exams/${exam.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
   }
 
 }

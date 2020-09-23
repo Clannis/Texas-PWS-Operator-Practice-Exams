@@ -7,7 +7,7 @@ class Exam {
         this.userId = examHash.user.id
         this.startedAt = examHash.created_at
         this.questions = []
-        examHash.questions.forEach((questionHash) => {
+        examHash.exam_questions.forEach((questionHash) => {
             let question = new Question(questionHash)
             this.questions.push(question)
         })

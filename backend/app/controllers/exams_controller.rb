@@ -28,6 +28,20 @@ class ExamsController < ApplicationController
         render json: {message: "Your exam has been removed!"}
     end
 
+    def update
+        @exam = Exam.find_by(id: params[:exam][:id])
+        params[:exam][:questions].each do |param_question|
+            @exam.questions.each do |exam_question|
+                question = Question.find_by(id: param_question[:id])
+                byebug
+                if question == exam_question
+                    
+                end
+            end
+        end
+        byebug
+    end
+
     private
 
     def exam_params

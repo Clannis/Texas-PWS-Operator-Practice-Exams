@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_21_211906) do
+ActiveRecord::Schema.define(version: 2020_09_23_012610) do
 
   create_table "answers", force: :cascade do |t|
     t.string "correct_answer"
@@ -19,9 +19,28 @@ ActiveRecord::Schema.define(version: 2020_09_21_211906) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "exam_questions", force: :cascade do |t|
+  create_table "exam_exam_questions", force: :cascade do |t|
     t.integer "exam_id"
-    t.integer "question_id"
+    t.integer "exam_question_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "exam_questions", force: :cascade do |t|
+    t.string "prompt"
+    t.string "a"
+    t.string "b"
+    t.string "c"
+    t.string "d"
+    t.string "e"
+    t.string "f"
+    t.boolean "multiple_answers"
+    t.integer "difficulty_rating"
+    t.string "category"
+    t.string "license"
+    t.string "field"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "exams", force: :cascade do |t|

@@ -1,4 +1,4 @@
 class ExamQuestion < ApplicationRecord
-    belongs_to :exam
-    belongs_to :question
+    has_many :exam_exam_questions
+    has_many :exams, through: :exam_exam_questions
 end
