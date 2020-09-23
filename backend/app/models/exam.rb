@@ -6,6 +6,7 @@ class Exam < ApplicationRecord
 
   def populate_questions(field, license)
     class_questions = Question.questions_per_exam(field, license)
+    exam_question_prompts = []
     while self.exam_questions.length < 50
       id = rand(0...class_questions.length)
       question = ExamQuestion.new(
@@ -22,9 +23,14 @@ class Exam < ApplicationRecord
         license:class_questions[id].license,
         field: class_questions[id].field
       )
-      if question && !self.exam_questions.include?(question)
-        question.save
+      if self.exam_questions.length == 0
         self.exam_questions << question
+        exam_question_prompts << question.prompt
+      else 
+          if !exam_question_prompts.include?(question.prompt)
+            self.exam_questions << question
+            exam_question_prompts << question.prompt
+          end
       end
     end
   end
