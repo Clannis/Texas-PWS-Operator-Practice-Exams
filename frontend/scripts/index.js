@@ -259,7 +259,7 @@ function renderSideNav(exam) {
 
     const questionList = document.createElement("li")
     questionList.innerText = "List Questions"
-    questionList.addEventListener("click", () => renderModal(exam))
+    questionList.addEventListener("click", () => renderQuestionModal(exam))
 
     const math = document.createElement("li")
     math.innerText = "Equations & Conversions"
@@ -276,11 +276,13 @@ function renderSideNav(exam) {
     submitContainer.appendChild(submitButton)
 }
 
-function renderModal(exam) {
+function renderQuestionModal(exam) {
     const modal = document.querySelector(".modal")
     modal.style.display = "block"
     const content = document.querySelector(".modal-content")
-    const questionNumberList = document.querySelector(".modal-question-list")
+    const questionNumberList = document.createElement("div")
+    questionNumberList.className = "modal-question-list"
+    content.appendChild(questionNumberList)
     for (let key in exam.questions) {
         const questionNumber = document.createElement("li")
         questionNumber.className = "modal-question-number"
@@ -295,7 +297,7 @@ function renderModal(exam) {
             const navButtons = document.querySelector(".nav-buttons")
             navButtons.parentNode.removeChild(navButtons)
             modal.style.display = "none";
-            questionNumberList.innerHTML = ""
+            questionNumberList.parentNode.removeChild(questionNumberList)
             exam.currentQuestion = parseInt(key)
             selectQuestion(exam, parseInt(key))
         })
