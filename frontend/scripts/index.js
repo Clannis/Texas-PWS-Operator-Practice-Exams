@@ -263,6 +263,7 @@ function renderSideNav(exam) {
 
     const math = document.createElement("li")
     math.innerText = "Equations & Conversions"
+    math.addEventListener("click", () => renderMathModal())
 
     navList.append(examsPage, questionList, math)
     navWindow.appendChild(navList)
@@ -315,6 +316,49 @@ function renderQuestionModal(exam) {
         if (event.target == modal) {
           modal.style.display = "none";
           questionNumberList.innerHTML = ""
+        }
+    })
+}
+
+function renderMathModal() {
+    const modal = document.querySelector(".modal")
+    modal.style.display = "block"
+    const content = document.querySelector(".modal-content")
+
+    const equations = document.createElement("div")
+    equations.className = "equations"
+    equations.innerHTML = `<u><strong style="font-size:25px">Equations</strong></u>
+        <div class="equation"><strong>Average (arithmetic mean)</strong> = Sum of All Terms / Number of Terms</div>
+        <div class="equation"><strong>Dosage</strong> = Demand + Residual</div>
+        <div class="conversion"><strong>Volume of Cylinder</strong> = (0.785)(Diameter)(Diameter)(Height) - or - (&Pi;)(Radius)(Radius)(Height)</div>
+        <div class="equation"><strong>Volume of Rectangular Tank</strong> = (Length)(Width)(Height)</div>
+    `
+    content.appendChild(equations)
+    const conversions = document.createElement("div")
+    conversions.className = "conversions"
+    conversions.innerHTML = `<u><strong style="font-size:25px">Conversions</strong></u>
+        <div class="conversion"><strong>1 cubic foot of water</strong> = 7.48 gallons</div>
+        <div class="conversion"><strong>1 foot</strong> = 12 inches</div>
+        <div class="conversion"><strong>1 foot of water</strong> = 0.433 pounds per square inch (PSI)</div>
+        <div class="conversion"><strong>1 Gallon</strong> = 8.34 pounds (lbs)</div>
+        <div class="conversion"><strong>1 hour</strong> = 60 minutes</div>
+        <div class="conversion"><strong>1 Million Gallons per Day (MGD)</strong> = 1,000,000 Gallons per Day - or - 694 Gallons per Minute (GPM)</div>
+        <div class="conversion"><strong>1 Ton</strong> = 2,000 pounds (lbs)</div>
+        <div class="conversion"><strong>1 yard</strong> = 3 feet</div>
+    `
+    content.appendChild(conversions)
+
+    const span = document.querySelector(".close")
+
+    span.addEventListener("click",() => {
+        modal.style.display = "none";
+        equations.innerHTML = ""
+    })
+
+    window.addEventListener("click", (event) => {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          equations.innerHTML = ""
         }
     })
 }
