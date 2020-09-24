@@ -192,6 +192,7 @@ function renderQuestion(exam, question, index) {
     const promt = document.querySelector(".prompt")
     promt.innerText = `${question.prompt}`
     const answers = document.querySelector(".answers")
+    answers.innerHTML = ""
 
     for (let key in question.answers) {
         if (!!question.answers[key]) {
@@ -224,7 +225,6 @@ function renderQuestion(exam, question, index) {
                 nextButton.parentNode.removeChild(nextButton)
             }
             navButtons.parentNode.removeChild(navButtons)
-            answers.innerHTML = ""
             exam.currentQuestion -= 1
             selectQuestion(exam, exam.currentQuestion)
         })
@@ -235,7 +235,6 @@ function renderQuestion(exam, question, index) {
         navButtons.appendChild(nextButton)
         nextButton.addEventListener("click", () => {
             question.selectedAnswer = document.forms[0].elements["selectedAnswer"].value
-            answers.innerHTML = ""
             exam.currentQuestion += 1
             navButtons.parentNode.removeChild(navButtons)
             if (index !== 0) {
@@ -291,6 +290,15 @@ function renderModal(exam) {
         }
         questionNumber.innerText = parseInt(key) + 1
         questionNumberList.appendChild(questionNumber)
+
+        questionNumber.addEventListener("click", () => {
+            const navButtons = document.querySelector(".nav-buttons")
+            navButtons.parentNode.removeChild(navButtons)
+            modal.style.display = "none";
+            questionNumberList.innerHTML = ""
+            exam.currentQuestion = parseInt(key)
+            selectQuestion(exam, parseInt(key))
+        })
     }
     
 
