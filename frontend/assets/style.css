@@ -290,7 +290,7 @@ footer {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
   }
   
   .close {
@@ -306,3 +306,33 @@ footer {
     text-decoration: none;
     cursor: pointer;
   }
+
+  .modal-question-list {
+    display: flex;  
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  .modal-question-number {
+    background-color: darkolivegreen;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+}
+
+.answered {
+    background-color: cadetblue;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
