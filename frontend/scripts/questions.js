@@ -15,6 +15,6 @@ class Question {
         this.multipleAnswers = questionHash.multiple_answers
         this.difficultyRating = questionHash.difficulty_rating
         this.category = questionHash.category
-        this.selectedAnswer = ""
+        this.selectedAnswer = questionHash.selected_answer
     }
 }
