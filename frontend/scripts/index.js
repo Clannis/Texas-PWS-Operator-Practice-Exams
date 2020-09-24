@@ -249,19 +249,25 @@ function renderQuestion(exam, question, index) {
 function renderSideNav(exam) {
     const navWindow = document.querySelector(".bottom-left")
     const navList = document.createElement("ul")
+
     const examsPage = document.createElement("li")
     examsPage.innerText = "Save & Go Back to Exams"
-    const questionList = document.createElement("li")
-    questionList.innerText = "List Questions"
-    const math = document.createElement("li")
-    math.innerText = "Equations & Conversions"
-    navList.append(examsPage, questionList, math)
-    navWindow.appendChild(navList)
     examsPage.addEventListener("click", () => {
         exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
         adapter.updateExam(exam)
         .then(() => renderUser(USER))
     })
+
+    const questionList = document.createElement("li")
+    questionList.innerText = "List Questions"
+    questionList.addEventListener("click", () => renderModal())
+
+    const math = document.createElement("li")
+    math.innerText = "Equations & Conversions"
+
+    navList.append(examsPage, questionList, math)
+    navWindow.appendChild(navList)
+    
     const submitContainer = document.createElement("div")
     submitContainer.className = "submit-container"
     navWindow.appendChild(submitContainer)
@@ -269,4 +275,21 @@ function renderSideNav(exam) {
     submitButton.className = "submit"
     submitButton.innerText = "Submit & Grade"
     submitContainer.appendChild(submitButton)
+}
+
+function renderModal() {
+    const modal = document.querySelector(".modal")
+    modal.style.display = "block"
+    const content = document.querySelector(".modal-content")
+    const span = document.querySelector(".close")
+
+    span.addEventListener("click",() => {
+        modal.style.display = "none";
+    })
+
+    window.addEventListener("click", (event) => {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+    })
 }
