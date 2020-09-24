@@ -262,4 +262,11 @@ function renderSideNav(exam) {
         adapter.updateExam(exam)
         .then(() => renderUser(USER))
     })
+    const submitContainer = document.createElement("div")
+    submitContainer.className = "submit-container"
+    navWindow.appendChild(submitContainer)
+    const submitButton = document.createElement("div")
+    submitButton.className = "submit"
+    submitButton.innerText = "Submit & Grade"
+    submitContainer.appendChild(submitButton)
 }

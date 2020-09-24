@@ -48,6 +48,7 @@ div.right-column {
 
 .bottom-left {
     background-color: #2e3cbb;
+    text-align: center;
 }
 
 .bottom-right {
@@ -242,4 +243,29 @@ footer {
     color: blanchedalmond;
     padding: 10px;
     margin: 10px;
+}
+
+.answers, .prompt, .question-number {
+    margin-left: 20px;
+}
+
+.submit-container {
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    justify-content: center;
+}
+
+.submit {
+    border-radius: 10px;
+    background-color: green;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 125px;
+    text-align: center;
+    color: blanchedalmond;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
 }
