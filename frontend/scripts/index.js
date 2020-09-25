@@ -72,8 +72,11 @@ function renderExamListItem(exam) {
     li.classList.add("exam-card")
     li.innerHTML = `
         <p><strong>${exam.field} - Class ${exam.license}</strong></p>
-        <p>Grade: ${exam.grade}</p>
-        <p>Started: ${exam.started()}</p>
+        `
+    if (exam.grade) {
+        li.innerHTML += `<p>Grade: ${exam.grade}% out of 100%</p>`
+    }
+    li.innerHTML += `<p>Started: ${exam.started()}</p>
     `
     examList.appendChild(li)
     const continueButton = document.createElement("p")
