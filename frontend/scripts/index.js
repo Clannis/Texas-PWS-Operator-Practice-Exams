@@ -81,11 +81,19 @@ function renderExamListItem(exam) {
     li.innerHTML += `<p>Started: ${exam.started()}</p>
     `
     examList.appendChild(li)
-    const continueButton = document.createElement("p")
-    continueButton.className = "continue"
-    continueButton.innerText = "Continue Exam"
-    li.appendChild(continueButton)
-    continueButton.addEventListener("click", () => renderExam(exam))
+    if (exam.completed) {
+        const reviewButton = document.createElement("p")
+        reviewButton.className = "continue"
+        reviewButton.innerText = "Review Exam"
+        li.appendChild(reviewButton)
+        reviewButton.addEventListener("click", () => renderExamResults(exam))
+    } else {
+        const continueButton = document.createElement("p")
+        continueButton.className = "continue"
+        continueButton.innerText = "Continue Exam"
+        li.appendChild(continueButton)
+        continueButton.addEventListener("click", () => renderExam(exam))
+    }
     const deleteButton = document.createElement("p")
     deleteButton.className = "delete"
     deleteButton.innerText = "Delete"
