@@ -41,7 +41,7 @@ class Exam < ApplicationRecord
         grade += 2
       end
     end
-    self.update(grade: grade)
+    self.update(grade: grade, completed: true)
     self.completed = true
   end
 

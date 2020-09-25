@@ -73,8 +73,10 @@ function renderExamListItem(exam) {
     li.innerHTML = `
         <p><strong>${exam.field} - Class ${exam.license}</strong></p>
         `
-    if (exam.grade) {
+    if (exam.completed) {
         li.innerHTML += `<p>Grade: ${exam.grade}% out of 100%</p>`
+    } else {
+        li.innerHTML += `<p>Exam Not Completed</p>`
     }
     li.innerHTML += `<p>Started: ${exam.started()}</p>
     `

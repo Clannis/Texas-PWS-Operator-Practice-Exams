@@ -37,7 +37,6 @@ class ExamsController < ApplicationController
         end
         if params[:message] == "submit"
             @exam.grade_exam
-            byebug
         end
         render json: @exam
     end
