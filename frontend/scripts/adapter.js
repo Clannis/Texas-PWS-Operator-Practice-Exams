@@ -46,6 +46,38 @@ const adapter = {
 
   updateExam: function(exam) {
     const data = {
+      message: "update",
+      exam: {
+        id: exam.id,
+        user_id: exam.userId,
+        current_question: exam.currentQuestion,
+        questions: []
+      }
+    }
+
+    exam.questions.forEach ((question) => {
+      if (question.selectedAnswer) {
+        questionHash = {
+          id: question.id,
+          selected_answer: question.selectedAnswer
+        }
+        data.exam.questions.push(questionHash)
+      }
+    })
+
+    return fetch(`${API}/exams/${exam.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+  },
+
+  submitExam: function(exam) {
+    const data = {
+      message: "submit",
       exam: {
         id: exam.id,
         user_id: exam.userId,

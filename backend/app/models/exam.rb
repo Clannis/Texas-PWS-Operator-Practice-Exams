@@ -35,6 +35,17 @@ class Exam < ApplicationRecord
     end
   end
 
+  def grade_exam
+    grade = 0
+    self.exam_questions.each do |question|
+      if question.correct?
+        grade += 2
+      end
+    end
+    self.grade = grade
+    self.completed = true
+  end
+
   private
 
   def destroy_exam_questions

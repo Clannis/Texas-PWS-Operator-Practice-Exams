@@ -35,7 +35,10 @@ class ExamsController < ApplicationController
             question = ExamQuestion.find_by(id: param_question[:id])
             question.update(id: param_question[:id], selected_answer: param_question[:selected_answer])
         end
-        render json: {message: "Your exam has been saved!"}
+        if params[:message] == "submit"
+            @exam.grade_exam
+        end
+        render json: @exam
     end
 
     private

@@ -276,6 +276,11 @@ function renderSideNav(exam) {
     submitButton.className = "submit"
     submitButton.innerText = "Submit & Grade"
     submitContainer.appendChild(submitButton)
+    submitButton.addEventListener("click", () => {
+        exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
+        adapter.submitExam(exam)
+        .then((data) => console.log(data))
+    })
 }
 
 function renderQuestionModal(exam) {
@@ -288,7 +293,6 @@ function renderQuestionModal(exam) {
     for (let key in exam.questions) {
         const questionNumber = document.createElement("li")
         questionNumber.className = "modal-question-number"
-        console.log(exam.questions[key].selectedAnswer)
         if (exam.questions[key].selectedAnswer) {
             questionNumber.className += " answered"
         }
