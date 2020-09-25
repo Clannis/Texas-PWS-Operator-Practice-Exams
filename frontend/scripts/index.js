@@ -377,6 +377,7 @@ function renderExamResults(exam) {
     const container = document.querySelector("div.container")
     container.innerHTML = ""
     const message = document.createElement("h2")
+    message.className = "result-message"
     if (exam.grade > 69) {
         message.innerHTML = `Congratulations ${USER.username}!!<br>
         <u><strong>You Passed!!</strong></u>`
@@ -389,18 +390,21 @@ function renderExamResults(exam) {
     container.appendChild(resultsDiv)
 
     const resultsHeading = document.createElement("h3")
-    resultsHeading.innerText = "Your Exam Results"
+    resultsHeading.className = "result-heading"
+    resultsHeading.innerHTML = "Your Exam Results"
     container.appendChild(resultsHeading)
 
     const resultsGrade = document.createElement("p")
-    resultsGrade.innerHTML = `You Scored: <u>${exam.grade}%</u> Out Of 100%`
+    resultsGrade.className = "grade"
+    resultsGrade.innerHTML = `You Scored: <u>${exam.grade}%</u> Out Of 100%<hr>`
     container.appendChild(resultsGrade)
 
     const questionsContainer = document.createElement("div")
     container.appendChild(questionsContainer)
 
-    const questionHeader = document.createElement("p")
-    questionHeader.innerText = "Questions"
+    const questionHeader = document.createElement("h3")
+    questionHeader.className = "question-header"
+    questionHeader.innerText = "Review Your Questions"
     questionsContainer.appendChild(questionHeader)
 
     const questionNumberList = document.createElement("ul")

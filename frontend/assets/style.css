@@ -422,3 +422,19 @@ footer {
 .wrong {
     background-color: rgb(148, 4, 4);
 }
+
+.result-message {
+    text-align: center;
+}
+
+.result-heading {
+    text-align: center;
+}
+
+.grade {
+    text-align: center;
+}
+
+.question-header{
+    text-align: center;
+}
