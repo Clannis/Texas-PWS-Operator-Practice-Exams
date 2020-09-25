@@ -247,9 +247,10 @@ function renderQuestion(exam, question, index) {
 
 function renderSideNav(exam) {
     const navWindow = document.querySelector(".bottom-left")
-    const navList = document.createElement("ul")
+    const navList = document.createElement("div")
+    navList.className = "side-nav"
 
-    const examsPage = document.createElement("li")
+    const examsPage = document.createElement("div")
     examsPage.innerText = "Save & Go Back to Exams"
     examsPage.addEventListener("click", () => {
         exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
@@ -257,11 +258,11 @@ function renderSideNav(exam) {
         .then(() => renderUser(USER))
     })
 
-    const questionList = document.createElement("li")
+    const questionList = document.createElement("div")
     questionList.innerText = "List Questions"
     questionList.addEventListener("click", () => renderQuestionModal(exam))
 
-    const math = document.createElement("li")
+    const math = document.createElement("div")
     math.innerText = "Equations & Conversions"
     math.addEventListener("click", () => renderMathModal())
 
@@ -353,12 +354,14 @@ function renderMathModal() {
     span.addEventListener("click",() => {
         modal.style.display = "none";
         equations.innerHTML = ""
+        conversions.innerHTML = ""
     })
 
     window.addEventListener("click", (event) => {
         if (event.target == modal) {
           modal.style.display = "none";
           equations.innerHTML = ""
+          conversions.innerHTML = ""
         }
     })
 }

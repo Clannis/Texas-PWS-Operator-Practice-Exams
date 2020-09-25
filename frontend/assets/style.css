@@ -6,7 +6,7 @@ html, body {
 
 div.container {
     float: left;
-    height: 100%;
+    height: 93vh;
     background-color: rgb(124, 120, 118);
     width: 100%;
 }
@@ -245,13 +245,19 @@ footer {
     margin: 10px;
 }
 
+.nav-buttons div:hover {
+    background-color: rgb(99, 5, 143);
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(58, 97, 182);
+}
+
 .answers, .prompt, .question-number {
     margin-left: 20px;
 }
 
 .submit-container {
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     width: 20%;
     justify-content: center;
 }
@@ -270,12 +276,19 @@ footer {
     display: inline-block;
 }
 
+.submit:hover {
+    background-color: rgb(99, 5, 143);
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(58, 97, 182);
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
+    padding-bottom: 100px;
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -314,7 +327,7 @@ footer {
   }
 
   .modal-question-number {
-    background-color: darkolivegreen;
+    background-color: rgb(141, 29, 29);
     border-color: black;
     border-style: solid;
     border-width: 1px;
@@ -324,10 +337,11 @@ footer {
     text-align: center;
     height: 20px;
     width: 20px;
+    color: blanchedalmond;
 }
 
-.answered {
-    background-color: cadetblue;
+.modal-question-number:hover {
+    background-color: rgb(43, 132, 192);
     border-color: black;
     border-style: solid;
     border-width: 1px;
@@ -335,4 +349,44 @@ footer {
     margin: 10px;
     padding: 10px;
     text-align: center;
+    height: 20px;
+    width: 20px;
+    cursor: pointer
+}
+
+.answered {
+    background-color: rgb(36, 199, 85);
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.side-nav {
+    list-style: none;
+    text-align: center;
+}
+
+.side-nav div {
+    display: inline-block; 
+    border-radius: 10px;
+    background-color: green;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 150px;
+    text-align: center;
+    color: blanchedalmond;
+    padding: 10px;
+    margin: 5px;
+}
+
+.side-nav div:hover {
+    background-color: crimson;
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(58, 97, 182);
+    cursor: pointer
 }
