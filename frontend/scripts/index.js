@@ -420,7 +420,63 @@ function renderExamResults(exam) {
         questionNumberList.appendChild(questionNumber)
 
         questionNumber.addEventListener("click", () => {
-        
+            renderQuestionModal(exam.questions[key])
         })
     }
+}
+
+function renderQuestionModal(question) {
+    const modal = document.querySelector(".modal")
+    modal.style.display = "block"
+    const content = document.querySelector(".modal-content")
+
+    const prompt = document.createElement("h3")
+    
+    content.appendChild(prompt)
+
+    const answers = document.createElement("div")
+    content.appendChild(answers)
+
+    if (question.selectedAnswer) {
+        prompt.innerHTML = `${question.prompt}`
+        for (let key in question.answers) {
+            if (!!question.answers[key]) {
+                if (question.correctAnswer == question.selectedAnswer && question.correctAnswer == key) {
+                    answers.innerHTML += `
+                        <p style="color:green">${key.toUpperCase()}: ${question.answers[key]} <-- You Answered Correct</p><br> 
+                    `
+                } else if (question.correctAnswer == key) {
+                    answers.innerHTML += `
+                        <p style="color:green">${key.toUpperCase()}: ${question.answers[key]} <-- Correct Answer</p><br> 
+                    `
+                } else if (question.selectedAnswer === key) {
+                    answers.innerHTML += `
+                    <p style="color:red">${key.toUpperCase()}: ${question.answers[key]} <-- Your Answer</p><br> 
+                    `
+                } else {
+                    answers.innerHTML += `
+                    <p >${key.toUpperCase()}: ${question.answers[key]}</p><br> 
+                    `
+                }
+            }   
+        }
+    } else {
+        answers.innerHTML += `<p><strong>You Did Not Answer This Question</strong></p>`
+    }
+
+    const span = document.querySelector(".close")
+
+    span.addEventListener("click",() => {
+        prompt.parentNode.removeChild(prompt)
+        answers.parentNode.removeChild(answers)
+        modal.style.display = "none";
+    })
+
+    window.addEventListener("click", (event) => {
+        if (event.target == modal) {
+            prompt.parentNode.removeChild(prompt)
+            answers.parentNode.removeChild(answers)
+            modal.style.display = "none";
+        }
+    })
 }

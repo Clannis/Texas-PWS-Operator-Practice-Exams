@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_25_125303) do
+ActiveRecord::Schema.define(version: 2020_09_25_151742) do
 
   create_table "answers", force: :cascade do |t|
     t.string "correct_answer"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_09_25_125303) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "selected_answer"
     t.boolean "correct"
+    t.string "correct_answer"
     t.index ["exam_id"], name: "index_exam_questions_on_exam_id"
   end
 

@@ -17,5 +17,6 @@ class Question {
         this.category = questionHash.category
         this.selectedAnswer = questionHash.selected_answer
         this.correct = questionHash.correct
+        this.correctAnswer = questionHash.correct_answer
     }
 }
