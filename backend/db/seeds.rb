@@ -1285,3 +1285,333 @@ a = Answer.create(
     correct_answer: "c"
 )
 q.answer = a
+
+
+##########################################################################################################
+#                                                                                                        #
+#                                      Water Treatment Class - D                                         #
+#                                                                                                        #
+##########################################################################################################
+# 1
+q = Question.create(
+    prompt: "What is the name of the State Agency responsible for enforcing the Safe Drinking Water Program in Texas?", 
+    a: "Texas Water Development Board", 
+    b: "Texas Department of Water Resources", 
+    c: "Texas Section of EPA", 
+    d: "Texas Water Resource and Conservation Commission",
+    e: "Texas Commission on Environmental Quality (formally known as TNRCC)",
+    multiple_answers: false, 
+    difficulty_rating: 1,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "e"
+)
+q.answer = a
+
+# 2
+q = Question.create(
+    prompt: "What minerals are associated with water hardness?", 
+    a: "Chlorine and Manganese", 
+    b: "Calcium and Magnesium", 
+    c: "Sulfates and Chlorides", 
+    d: "Carbon and Nitrogen",
+    e: "Chlorine and Hydrogen",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 3
+q = Question.create(
+    prompt: "A public water system MUST at all times provide:", 
+    a: "Adequate quantity of water", 
+    b: "Adequate water pressure", 
+    c: "Adequate Disinfection", 
+    d: "All of the Above",
+    e: "Only A & C",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 4
+q = Question.create(
+    prompt: "A source of Groundwater would be:", 
+    a: "Aquifer", 
+    b: "River", 
+    c: "Lake", 
+    d: "Stream",
+    e: "Reservoir",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 5
+q = Question.create(
+    prompt: "Fecal Coliform organisms sometimes found in water supplies are an indication that:", 
+    a: "The Water supply is contaminated", 
+    b: "Harmful bacteria may be present", 
+    c: "Possible pathogenic organisms are in the water", 
+    d: "The water is unsuitable for drinking",
+    e: "All of the Above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "e"
+)
+q.answer = a
+
+# 6
+q = Question.create(
+    prompt: "A disease that May be spread by inadequately disinfected water is:", 
+    a: "Acquired Immune Dificiency Syndrome (AIDS)", 
+    b: "Polio", 
+    c: "Smallpox", 
+    d: "Dysentery",
+    e: "All of the Above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 7
+q = Question.create(
+    prompt: "A common chemical used in the disinfection of a small water supply is:", 
+    a: "Bromine", 
+    b: "Flouride", 
+    c: "Sodium Hydroxide", 
+    d: "Sodium Benzene",
+    e: "Calcium Hypochlorite",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "e"
+)
+q.answer = a
+
+# 8
+q = Question.create(
+    prompt: "A public water supply system should maintain a system residual pressure of 20 psi and a minimum normal operating pressure of:", 
+    a: "35 psi", 
+    b: "40 psi", 
+    c: "45 psi", 
+    d: "None of the above",
+    e: "No rule exists regarding minimum operating pressure",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 9
+q = Question.create(
+    prompt: "The amount of Chlorine in mg/L that is used up by reacting with iron, organics, or bacteria is called?", 
+    a: "Demand", 
+    b: "Disinfection", 
+    c: "Treatment", 
+    d: "Dosage",
+    e: "Residual",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 10
+q = Question.create(
+    prompt: "The MOST important treatment in water is:", 
+    a: "Disinfection", 
+    b: "Flouride Injection", 
+    c: "Flocculation", 
+    d: "Organic Removal",
+    e: "Both A & C",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 11
+q = Question.create(
+    prompt: "Which of the following would be considered a part(s) of a hypo-chlorinator system?", 
+    a: "Solution feed pump", 
+    b: "Scale", 
+    c: "Rotometer", 
+    d: "150 lb. Cylinder",
+    e: "All of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 12
+q = Question.create(
+    prompt: "According to state requirements, all public water supply wells shall be provided with a raised concrete sealing block, screened vents and:", 
+    a: "Foot valve", 
+    b: "Double check valve", 
+    c: "Flow measuring device", 
+    d: "Air gauge for verifying drawdown",
+    e: "Emergency Shut off and lock out device",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 13
+q = Question.create(
+    prompt: "One method to determin the drawdown of a water well is:", 
+    a: "An air line", 
+    b: "An electronic volt/ohm meter", 
+    c: "An in line flow meter", 
+    d: "An amplified sounding unit",
+    e: "Monitoring the discharge pressure gauge & timing pump cycles",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 14
+q = Question.create(
+    prompt: "The pH of water indicates:", 
+    a: "If it is more acid or base", 
+    b: "If the water is considered hard", 
+    c: "If the water is considered soft ", 
+    d: "How much flouride is naturally occuring in the water",
+    e: "Not important in potable water treatment",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 15
+q = Question.create(
+    prompt: "Assuming you collect more than one bacteriological sample monthly and your system receives notification from the lab that one of the samples taken in the distribution system comes back positive - your repeat sample(s) must be taken within __________ hours (excluding weekends) and a total of _______________ repeat samples must be collected for each positive.", 
+    a: "48 hours & 4 repeat samples for each positive", 
+    b: "24 hours & 3 repeat samples for each positive", 
+    c: "72 hours & 1 repeat samples for each positive", 
+    d: "72 hours & 3 repeat samples for each positive",
+    e: "Rule not currently enforced by the state",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 16
+q = Question.create(
+    prompt: "Water that is considered neutral is expressed on the pH scale as:", 
+    a: "0.00", 
+    b: "14.0", 
+    c: "7.0", 
+    d: "0.7",
+    e: "0.07",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 17
+q = Question.create(
+    prompt: "Which of the following is a required step in collection a routine distribution sample for bacteriological testing?", 
+    a: "Use of an approved, sterile sample container", 
+    b: "Use of a sample site close to the storage tank", 
+    c: "Rinse out the sample container before collecting the sample", 
+    d: "Fill the sample container to at least 50% capacity",
+    e: "All of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 18
+q = Question.create(
+    prompt: "Potable water means the water is:", 
+    a: "Maintained at adequate pressure", 
+    b: "Pathogen free", 
+    c: "Containes a chlorine residual", 
+    d: "All of the above",
+    e: "Both B & C",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
