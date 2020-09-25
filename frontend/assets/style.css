@@ -388,7 +388,6 @@ footer {
     background-color: crimson;
     cursor: pointer;
     box-shadow: 3px 3px rgb(58, 97, 182);
-    cursor: pointer
 }
 
 .question-list {
@@ -410,10 +409,15 @@ footer {
     color: blanchedalmond;
 }
 
+.question-end:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(58, 97, 182);
+}
+
 .correct {
     background-color: green;
 }
 
 .wrong {
-    background-color: red;
+    background-color: rgb(148, 4, 4);
 }
