@@ -7,7 +7,6 @@ class CreateExamQuestions < ActiveRecord::Migration[6.0]
       t.string :c
       t.string :d
       t.string :e
-      t.string :f
       t.boolean :multiple_answers
       t.integer :difficulty_rating
       t.string :category

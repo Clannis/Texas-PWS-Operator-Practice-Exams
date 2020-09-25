@@ -279,7 +279,10 @@ function renderSideNav(exam) {
     submitButton.addEventListener("click", () => {
         exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
         adapter.submitExam(exam)
-        .then((data) => console.log(data))
+        .then((data) => {
+            exam = new Exam(data)
+            renderExamResults(exam)
+        })
     })
 }
 
@@ -368,4 +371,56 @@ function renderMathModal() {
           conversions.innerHTML = ""
         }
     })
+}
+
+function renderExamResults(exam) {
+    const container = document.querySelector("div.container")
+    container.innerHTML = ""
+    const message = document.createElement("h2")
+    if (exam.grade > 69) {
+        message.innerHTML = `Congratulations ${USER.username}!!<br>
+        <u><strong>You Passed!!</strong></u>`
+    } else {
+        message.innerHTML = `You Failed.<br>
+        Study Some More and Try Again.`
+    }
+    container.appendChild(message)
+    const resultsDiv = document.createElement("div")
+    container.appendChild(resultsDiv)
+
+    const resultsHeading = document.createElement("h3")
+    resultsHeading.innerText = "Your Exam Results"
+    container.appendChild(resultsHeading)
+
+    const resultsGrade = document.createElement("p")
+    resultsGrade.innerHTML = `You Scored: <u>${exam.grade}%</u> Out Of 100%`
+    container.appendChild(resultsGrade)
+
+    const questionsContainer = document.createElement("div")
+    container.appendChild(questionsContainer)
+
+    const questionHeader = document.createElement("p")
+    questionHeader.innerText = "Questions"
+    questionsContainer.appendChild(questionHeader)
+
+    const questionNumberList = document.createElement("ul")
+    questionNumberList.className = "question-list"
+    questionsContainer.appendChild(questionNumberList)
+
+    for (let key in exam.questions) {
+        const questionNumber = document.createElement("li")
+        questionNumber.className = "question-end"
+        if (exam.questions[key].correct) {
+            questionNumber.className += " correct"
+        } else {
+            questionNumber.className += " wrong"
+        }
+        
+        questionNumber.innerText = parseInt(key) + 1
+        questionNumberList.appendChild(questionNumber)
+
+        questionNumber.addEventListener("click", () => {
+        
+        })
+    }
 }

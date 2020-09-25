@@ -296,7 +296,7 @@ footer {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+}
 
 .modal-content {
     background-color: #fefefe;
@@ -304,29 +304,29 @@ footer {
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
-  }
+}
   
-  .close {
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
-  .close:hover,
-  .close:focus {
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  .modal-question-list {
+.modal-question-list {
     display: flex;  
     flex-wrap: wrap;
     list-style: none;
-  }
+}
 
-  .modal-question-number {
+.modal-question-number {
     background-color: rgb(141, 29, 29);
     border-color: black;
     border-style: solid;
@@ -389,4 +389,31 @@ footer {
     cursor: pointer;
     box-shadow: 3px 3px rgb(58, 97, 182);
     cursor: pointer
+}
+
+.question-list {
+    display: flex;  
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.question-end {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    color: blanchedalmond;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
 }

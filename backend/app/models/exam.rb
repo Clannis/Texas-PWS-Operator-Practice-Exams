@@ -16,7 +16,6 @@ class Exam < ApplicationRecord
         c: class_questions[id].c,
         d: class_questions[id].d,
         e: class_questions[id].e,
-        f: class_questions[id].f,
         multiple_answers: class_questions[id].multiple_answers,
         difficulty_rating: class_questions[id].difficulty_rating,
         category: class_questions[id].category,

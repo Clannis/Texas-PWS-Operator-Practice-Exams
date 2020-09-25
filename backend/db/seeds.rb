@@ -1104,7 +1104,7 @@ q.answer = a
 q = Question.create(
     prompt: "Personal Protective Equipment (PPE) is:", 
     a: "Anything attached to your body for protection", 
-    b: "Suggested by OSHA but nbot required", 
+    b: "Suggested by OSHA but not required", 
     c: "Gloves, Faces Sheilds, Hearing Protection, Hard Hats", 
     d: "Not typically needed in most utility provider workplaces",
     e: "Both A & C", 
