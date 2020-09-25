@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function renderLogIn() {
-    const nav = document.createElement("div")
-    nav.innerHTML = ""
     const container = document.querySelector("div.container")
     container.innerHTML = ''
     const formTitle = document.createElement("h2")
@@ -132,8 +130,6 @@ function createLicenses(user, e) {
 }
 
 function renderExam(exam) {
-    const nav = document.querySelector(".nav")
-    nav.innerHTML = ""
     const container = document.querySelector("div.container")
     container.innerHTML =` 
         <div class="row1">
@@ -409,6 +405,12 @@ function renderExamResults(exam) {
             renderQuestionModal(exam.questions[key])
         })
     }
+
+    const returnHome = document.createElement("div")
+    returnHome.className = "continue"
+    returnHome.innerText = "Return to Exams List"
+    container.appendChild(returnHome)
+    returnHome.addEventListener("click", () => renderUser(USER))
 }
 
 function renderQuestionModal(question) {
