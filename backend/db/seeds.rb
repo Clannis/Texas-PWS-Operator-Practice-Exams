@@ -1615,3 +1615,309 @@ a = Answer.create(
     correct_answer: "d"
 )
 q.answer = a
+
+# 19
+q = Question.create(
+    prompt: "Should a public water supply systems distribution system drop below 20 psi what is required of the operator?", 
+    a: "Nothing 20 psu is simply a goal", 
+    b: "Immediately correct the problem or cause of low pressure", 
+    c: "Notify the Mayor & City Council", 
+    d: "Notify the Regional TCEQ Office and Issue a \"Boil Water Notice\"",
+    e: "Both B & D",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "e"
+)
+q.answer = a
+
+# 20
+q = Question.create(
+    prompt: "Before a new or repaired water line is placed into service, it must be properly disinfected by providing a chlorine dosage of _________ and proper detention time.", 
+    a: "20 mg/L", 
+    b: "30 mg/L", 
+    c: "40 mg/l", 
+    d: "50 mg/L",
+    e: "Currently there is no mandated standard or requirement",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 21
+q = Question.create(
+    prompt: "In a ground water system if the operator knows the \"standing\" water level in the well when the pump is off and he/she knows the water level in the well during \"pumping\" - he/she will be able to determine the _____________ of the well.", 
+    a: "Static Level", 
+    b: "GPM Production of well", 
+    c: "Drawdown", 
+    d: "Pump Size",
+    e: "Horsepower needed for the electric motor",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 22
+q = Question.create(
+    prompt: "TCEQ requires community water systems to have a MINIMUM production capacity of ____________ per connection at peak demand.", 
+    a: "0.3 gpm", 
+    b: "0.4 gpm", 
+    c: "0.5 gpm", 
+    d: "0.6 gpm",
+    e: "There is no TCEQ requirement - only a suggestion",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 23
+q = Question.create(
+    prompt: "The mesh size is an important feature of a well screen because properly sized openings should:", 
+    a: "Reduce the amount of sand pumped", 
+    b: "Increase the water velocity through the screen", 
+    c: "Eliminate the need for gravel packing", 
+    d: "Eliminate over pumping",
+    e: "All of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 24
+q = Question.create(
+    prompt: "Which of the following is an acceptable disinfection residual at the far reaches of the distribution system?", 
+    a: "0.2 mg/L free chlorine residual", 
+    b: "0.5 mg/L chloramine residual for a surface water supply", 
+    c: "0.8 mg/L chloramine residual when using chloramine treatment", 
+    d: "0.5 mg/L free chlorine residual for a ground water supply",
+    e: "All of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "e"
+)
+q.answer = a
+
+# 25
+q = Question.create(
+    prompt: "One gallon of water weighs:", 
+    a: "2.31 lbs", 
+    b: "7.48 lbs", 
+    c: "8.43 lbs", 
+    d: "8.34 lbs",
+    e: "None of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 26
+q = Question.create(
+    prompt: "One foot of water inside a storage vessel will raise a pressure gauge at the bottom of the vessel by:", 
+    a: "2.31 lbs", 
+    b: "43.3 lbs", 
+    c: "0.433 lbs", 
+    d: "27.3 lbs",
+    e: "8,34 lbs",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 27
+q = Question.create(
+    prompt: "Commomn type(s) of pump(s) for use in water wells are:", 
+    a: "Proportion Pump", 
+    b: "Split Case", 
+    c: "Vertical Turbine", 
+    d: "Submersible",
+    e: "Both C & D",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "e"
+)
+q.answer = a
+
+# 28
+q = Question.create(
+    prompt: "_____________________ is the natural exchange of water between the earth and air.", 
+    a: "Transportation Cycle", 
+    b: "Precipitation Cycle", 
+    c: "Hydrological Cycle", 
+    d: "Universal Cycle",
+    e: "All of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 29
+q = Question.create(
+    prompt: "If and wehn a health hazard contamination event occurs in a public water system, the operator must contact the state regulatory authority within _______ hours by telephone.", 
+    a: "8 working hours", 
+    b: "24 hours", 
+    c: "48 hours", 
+    d: "72 hours",
+    e: "When the supervisor returns and verifies the event",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 30
+q = Question.create(
+    prompt: "A physical connection between a potable water supply and a house well would be:", 
+    a: "Acceptable in Arkansas & Oklahoma", 
+    b: "A Cross Connection", 
+    c: "Considered a back up for the potable system", 
+    d: "Unaccounted for water loss",
+    e: "A Class C Misdemeanor",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 31
+q = Question.create(
+    prompt: "Excessive nitrates in drinking water can cause a condition that affects infants under the age of 6 months. This condition is known as:", 
+    a: "Shaken baby", 
+    b: "Crying baby", 
+    c: "Blue babies", 
+    d: "Hypothermia",
+    e: "Conditino does not exist - only a myth",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 32
+q = Question.create(
+    prompt: "A public water system is required to take samples of water for bacteriological analysis. The organism that is used as an indicator is called:", 
+    a: "Chloroform", 
+    b: "Coliform", 
+    c: "Chloramine", 
+    d: "Parasite",
+    e: "Amoeba",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 33
+q = Question.create(
+    prompt: "Chlorine dosage is demand plus desired _______________.", 
+    a: "Residue", 
+    b: "Residual", 
+    c: "Demand", 
+    d: "Treatment",
+    e: "both B & C",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 34
+q = Question.create(
+    prompt: "A storage vessel that is the same diameter from the ground to the top and is more than 20 feet but less than 85 feet tall is called a(n):", 
+    a: "Elevated storage", 
+    b: "Ground storage", 
+    c: "Spherical storage", 
+    d: "Stand pipe",
+    e: "Useless device",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 35
+q = Question.create(
+    prompt: "A water tank that uses compressed air over water to provide pressure is called a:", 
+    a: "Sand pressure filter", 
+    b: "Bladder tank", 
+    c: "Boiler", 
+    d: "Hydro pneumatic tank",
+    e: "Health hazard and should be removed",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
