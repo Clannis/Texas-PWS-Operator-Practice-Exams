@@ -6,23 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderLogIn()
 })
 
-function renderNav(user) {
-    const nav = document.querySelector(".nav")
-    nav.innerHTML = ""
-    const newUser  = document.createElement("div")
-    newUser.className = "nav-link"
-    newUser.innerText = "New User"
-    newUser.addEventListener("click", () => renderLogIn())
-    const exams  = document.createElement("div")
-    exams.className = "nav-link"
-    exams.innerText = "Exams"
-    exams.addEventListener("click", (e) => {
-        adapter.findOrCreateUser(user.username).then(data => renderUser(data))
-    })
-
-    nav.append(newUser, exams)
-}
-
 function renderLogIn() {
     const nav = document.createElement("div")
     nav.innerHTML = ""
@@ -55,7 +38,6 @@ function renderLogIn() {
 }
 
 function renderUser(user) {
-    renderNav(user)
     const container = document.querySelector("div.container")
     container.innerHTML = ''
     const userName = document.createElement("h2")
