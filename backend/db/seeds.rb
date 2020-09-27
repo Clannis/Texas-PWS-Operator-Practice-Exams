@@ -2012,3 +2012,200 @@ a = Answer.create(
 )
 q.answer = a
 
+# 41
+q = Question.create(
+    prompt: "A Texas Class D Certified Operator can operate a public water system up to __________ connections.", 
+    a: "250", 
+    b: "275", 
+    c: "500", 
+    d: "1,000",
+    e: "2,500",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 42
+q = Question.create(
+    prompt: "All state of Texas Operator Licenses after issue are good for _______ years.", 
+    a: "2 years", 
+    b: "3 years", 
+    c: "4 years", 
+    d: "8 years",
+    e: "None of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 43
+q = Question.create(
+    prompt: "Waterlines should be installed no closer than ________ feet to any sewer lines or other possible contaminate lines.", 
+    a: "6 feet", 
+    b: "7 feet", 
+    c: "8 feet", 
+    d: "9 feet",
+    e: "There are no recognized current standards",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 44
+q = Question.create(
+    prompt: "Calcium Hypochlorite (HTH) is used as a disinfectant n small systems, what percentage chlorine is this material typically?", 
+    a: "65 - 75%", 
+    b: "75 - 85%", 
+    c: "85 - 95%", 
+    d: "100%",
+    e: "5% - same as household bleach",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 45
+q = Question.create(
+    prompt: "Flushing dead-end mains - curent state regulations require that all public water systems flush dead-end mains to assure chlorine residual and water quality. What is the minimum flushing requirement?", 
+    a: "Once every month", 
+    b: "Once every quarter", 
+    c: "Annualy, proir to the sanitary inspection", 
+    d: "Customers on dead-end lines should be grateful to have water",
+    e: "TState has more important things to oversee and regulate",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 46
+q = Question.create(
+    prompt: "The process of adding enough chlorine to a water supply to complete all reactions with reducing compounds, ammonia, and organic materials so that some free chlorine is left is called:", 
+    a: "Breakpoint chlorination", 
+    b: "Chlorine demand", 
+    c: "Chlorine dosage", 
+    d: "Residual chlorination",
+    e: "Operator satisfaction",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 47
+q = Question.create(
+    prompt: "The primary reason(s) for main line failures in the distribution system is:", 
+    a: "Internal and external corrosion", 
+    b: "Defective material", 
+    c: "Lack of routine maintenance", 
+    d: "Improper backfill and lack of proper bedding",
+    e: "Both A & D",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "e"
+)
+q.answer = a
+
+# 48
+q = Question.create(
+    prompt: "Check valves on the discharge side of a pump are used to:", 
+    a: "Stop water flow in case of flooding", 
+    b: "Stop pump cavitations", 
+    c: "Assist in directing flow and velocity", 
+    d: "Prevent water from flowing back through the pump when the pump is off",
+    e: "Check valves are never used on the discharge side of a pump",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 49
+q = Question.create(
+    prompt: "After disinfaction and flushing of super chlorinated new lines and service but prior to placing the line into service, bacteriological samples are required. The current standard is _____________ sample for every ______________ feet of line.", 
+    a: "One sample for every 500 feet of line", 
+    b: "Two samples for every 1,000 feet of line", 
+    c: "One sample for every 1,000 feet of line", 
+    d: "Only one sample regardless of the length of line",
+    e: "Not a requirement - No samples are necessary",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 50
+q = Question.create(
+    prompt: "For Cross Connection Control the TCEQ's preferred method is:", 
+    a: "Testable Double Check Valve", 
+    b: "Reduced Pressure Zone (RPZ)", 
+    c: "Atmospheric Breaker Valve", 
+    d: "Physical Air Gap",
+    e: "All of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 51
+q = Question.create(
+    prompt: "One microorganism found in water that is resistant to chlorine is:", 
+    a: "Fecal Organisms", 
+    b: "Deoxyribonucleic acid", 
+    c: "Super Cell Amoeba", 
+    d: "Cryptosporidium",
+    e: "No known microorganism is resistant to Chlorine",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
