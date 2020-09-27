@@ -1942,7 +1942,7 @@ q.answer = a
 
 # 37
 q = Question.create(
-    prompt: "When testing for chlorine residual DPD is used as an indicator, when DPD is added to water containing chlorine what coler does the sample turn?", 
+    prompt: "When testing for chlorine residual DPD is used as an indicator, when DPD is added to water containing chlorine what color does the sample turn?", 
     a: "Blue", 
     b: "Red", 
     c: "Green", 
@@ -2207,5 +2207,113 @@ q = Question.create(
 )
 a = Answer.create(
     correct_answer: "d"
+)
+q.answer = a
+
+# 52
+q = Question.create(
+    prompt: "The most important federal law that impacts the water utility industry is:", 
+    a: "The Safe Water Drinking Act of 1974", 
+    b: "The Federal Water Standards Act of 1984", 
+    c: "The Federal Environmental Impact Assessment Act", 
+    d: "Texas Water Use Plan 2005",
+    e: "The EPA Minimum Standards Act 1996",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
+# 53
+q = Question.create(
+    prompt: "An example of a Non-Community Water System would be:", 
+    a: "RV Park", 
+    b: "Hotel / Motel", 
+    c: "Service Station", 
+    d: "All of the above",
+    e: "None of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 54
+q = Question.create(
+    prompt: "The EPA requires community water systems to provide customers with an annual:", 
+    a: "Notice of proposed rate increase", 
+    b: "Consumer Confidence Report", 
+    c: "Consumer Price Index Report", 
+    d: "Consumer Cost of Living Analysis",
+    e: "Copy of Department Expenditure Budget",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 55
+q = Question.create(
+    prompt: "A groundwater well is currently producing 820 gallons per minute. Convert 820 (gpm) to million gallons per day (MGD).", 
+    a: "19,680", 
+    b: "1.18", 
+    c: "1180", 
+    d: "1440",
+    e: "4.92",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 56
+q = Question.create(
+    prompt: "In the distribution system, where would a person expect to find a valve commonly referred to as a curb stop?", 
+    a: "In front of a fire hydrant", 
+    b: "At the provider's main line", 
+    c: "At the porperty line and immediately in front of the water meter", 
+    d: "On the discharge side of the high service pump",
+    e: "Typically used as an air relief device and found on ground water wells",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 57
+q = Question.create(
+    prompt: "Public Water Systems in Texas are required to compile and maintain reports showing:", 
+    a: "Pumpage & Chemical Used", 
+    b: "Date of Dead End Flushing & Storage tanks cleaned", 
+    c: "Microbiological tests & Chemical analysis", 
+    d: "A & C only",
+    e: "A, B, & C",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "e"
 )
 q.answer = a
