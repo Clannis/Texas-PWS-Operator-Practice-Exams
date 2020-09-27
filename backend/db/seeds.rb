@@ -2425,3 +2425,129 @@ a = Answer.create(
     correct_answer: "b"
 )
 q.answer = a
+
+# 64
+q = Question.create(
+    prompt: "You are treating 21 MGD of water. How many gallons per minuite (gpm) is this?", 
+    a: "1,458", 
+    b: "5,833", 
+    c: "8,750", 
+    d: "14,583",
+    e: "87,500",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 65
+q = Question.create(
+    prompt: "What is the approximate total volume in gallons of a circular tank, if it is 30 feet in diameter, and is 15 feet deep?", 
+    a: "5,284", 
+    b: "10,597", 
+    c: "15,854", 
+    d: "42,390",
+    e: "79,300",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "e"
+)
+q.answer = a
+
+# 66
+q = Question.create(
+    prompt: "In a groundwater system according to the well drillers report, the hole was drilled 338 feet deep - the static level of water in the well is 108 feet - the pumping level is 171 feet. What is the drawdown?", 
+    a: "179 feet", 
+    b: "279 feet", 
+    c: "63 feet", 
+    d: "167 feet",
+    e: "Not enough information to compute",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 67
+q = Question.create(
+    prompt: "At the base of an elevated storage tank a pressure gauge reads 72 psi, how far above the gauge is the water surface?", 
+    a: "16.6 feet", 
+    b: "31.1 feet", 
+    c: "166 feet", 
+    d: "1,663 feet",
+    e: "Not enough informatino to compute",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 68
+q = Question.create(
+    prompt: "How many pounds of 70% chlorine (HTH) will be needed to treat the same amount of water as 9.0 lbs. of 100% chlorine?", 
+    a: "11.85", 
+    b: "12.85", 
+    c: "6.3", 
+    d: "16.3",
+    e: "Not enough information to compute",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 69
+q = Question.create(
+    prompt: "Your system is currently pumping 1.4 MGD and using 9.0 mg/L chlorine. The residual at the far end of the distribution system is 0.4 mg/l. What is the demand?", 
+    a: "9.4 mg/L", 
+    b: "2.25 mg/L", 
+    c: "8.6 mg/L", 
+    d: "3.6 mg/L",
+    e: "Not enough information to compute",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 70
+q = Question.create(
+    prompt: "Your system is installing 6 miles of 10 inch Class 150 PVC water line. The pipe comes in 20 ft. sections. How many sections or joints of pipe will be installed in this project?", 
+    a: "120", 
+    b: "1584", 
+    c: "3,168", 
+    d: "10,4000",
+    e: "17,600",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
