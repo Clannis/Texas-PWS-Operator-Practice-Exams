@@ -2317,3 +2317,111 @@ a = Answer.create(
     correct_answer: "e"
 )
 q.answer = a
+
+# 58
+q = Question.create(
+    prompt: "Groundwater is generally well filtered and free of turbidity, color, and organics, however it may be high in:", 
+    a: "Total Suspended Solids", 
+    b: "Organics & Fecal Content", 
+    c: "Hardness, Minerals, & Inorganics", 
+    d: "Copper & Lead",
+    e: "Price & Used primarily for irrigation",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 59
+q = Question.create(
+    prompt: "Livestock and septic tanks must be no closer than _________ to a public well.", 
+    a: "5 feet", 
+    b: "25 feet", 
+    c: "50 feet", 
+    d: "500 feet",
+    e: "5280 feet",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 60
+q = Question.create(
+    prompt: "Feedlots, sewage treatment plants and landfills must be at least __________ feet from a public well.", 
+    a: "50 feet", 
+    b: "150 feet", 
+    c: "500 feet", 
+    d: "5,000 feet",
+    e: "15,000 feet",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 61
+q = Question.create(
+    prompt: "red water or red stains may be caused by high __________ levels in the water.", 
+    a: "Calcium", 
+    b: "Nitrates", 
+    c: "Iron", 
+    d: "Lead",
+    e: "Organic Vegitation",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 62
+q = Question.create(
+    prompt: "A \"pinging\" sound or \"rocks bouncing\" sound coming from the pump typically indicates the pump is:", 
+    a: "Over used", 
+    b: "Under used", 
+    c: "Cavitating", 
+    d: "Needs maintenance",
+    e: "Single phasing",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "c"
+)
+q.answer = a
+
+# 63
+q = Question.create(
+    prompt: "In the distribution system where would a person expect to find a valve commonly referred to as a Corporation Stop?", 
+    a: "In front of a fire hydrant", 
+    b: "At the provider's main line", 
+    c: "At the property line and immediately in front of the water meter", 
+    d: "On the discharge side of the high service pump",
+    e: "Typically used as an air relief device and found on ground water wells",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
