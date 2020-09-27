@@ -1921,3 +1921,94 @@ a = Answer.create(
     correct_answer: "d"
 )
 q.answer = a
+
+# 36
+q = Question.create(
+    prompt: "According to the lead and copper rule, pipe and fittings may not contain more than _________ lead or solder and flux may not contain more thean 0.2% lead.", 
+    a: "0.8%", 
+    b: "8.0%", 
+    c: "2.0%", 
+    d: "20%",
+    e: "None of the above",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 37
+q = Question.create(
+    prompt: "When testing for chlorine residual DPD is used as an indicator, when DPD is added to water containing chlorine what coler does the sample turn?", 
+    a: "Blue", 
+    b: "Red", 
+    c: "Green", 
+    d: "Yellow",
+    e: "There should be no change in color",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 38
+q = Question.create(
+    prompt: "The most common valve used for isolating a water leak is the ____________ valve.", 
+    a: "Ball valve", 
+    b: "Butterfly valve", 
+    c: "Check valve", 
+    d: "Gate valve",
+    e: "Pressure reducing valve",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "d"
+)
+q.answer = a
+
+# 39
+q = Question.create(
+    prompt: "In the distribution system when a valve or fire hydrant is opened or closed too fast it could result in a:", 
+    a: "Pressure drop", 
+    b: "Water hammer", 
+    c: "Cross connection", 
+    d: "Contamination",
+    e: "No change - this task is routinely performed",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "b"
+)
+q.answer = a
+
+# 40
+q = Question.create(
+    prompt: "The most commonly used pump n the distribution system is:", 
+    a: "Centrifugal", 
+    b: "Positive displacement", 
+    c: "Roller pump", 
+    d: "Submersible",
+    e: "Hollow shaft turbine",
+    multiple_answers: false, 
+    difficulty_rating: 2,
+    license: "Class - D",
+    field: "Water Treatment"
+)
+a = Answer.create(
+    correct_answer: "a"
+)
+q.answer = a
+
