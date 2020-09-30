@@ -251,7 +251,7 @@ function renderSideNav(exam) {
 
     const questionList = document.createElement("div")
     questionList.innerText = "List Questions"
-    questionList.addEventListener("click", () => renderQuestionModal(exam))
+    questionList.addEventListener("click", () => renderQuestionsModal(exam))
 
     const math = document.createElement("div")
     math.innerText = "Equations & Conversions"
@@ -277,7 +277,7 @@ function renderSideNav(exam) {
     })
 }
 
-function renderQuestionModal(exam) {
+function renderQuestionsModal(exam) {
     const modal = document.querySelector(".modal")
     modal.style.display = "block"
     const content = document.querySelector(".modal-content")
