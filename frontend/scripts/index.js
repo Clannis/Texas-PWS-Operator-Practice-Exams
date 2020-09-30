@@ -47,6 +47,8 @@ function renderUser(user) {
     container.appendChild(exams)
     const examTitle = document.createElement("h3")
     examTitle.innerText = "Your Exams"
+    const line = document.createElement("hr")
+    container.appendChild(line)
     exams.appendChild(examTitle)
     const examList = document.createElement("ul")
     examList.className = "exam-list"
