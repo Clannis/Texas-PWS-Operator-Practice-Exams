@@ -439,3 +439,7 @@ footer {
 .question-header{
     text-align: center;
 }
+
+.welcome, .login {
+    text-align: center;
+}

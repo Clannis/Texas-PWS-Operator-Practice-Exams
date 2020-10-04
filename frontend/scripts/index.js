@@ -1,5 +1,5 @@
-const EXAMTYPES = ["Water Treatment", "Wastewater Treatment"]
-const EXAMLICENSES = ["D", "C", "B"]
+const EXAMTYPES = ["Water Treatment"]
+const EXAMLICENSES = ["D", "C"]
 let USER = ""
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,10 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function renderLogIn() {
     const container = document.querySelector("div.container")
-    container.innerHTML = ''
+    // container.innerHTML = ''
     const formTitle = document.createElement("h2")
-    formTitle.innerText = "Please Enter Your Username"
+    formTitle.className = "login"
+    formTitle.innerText = "Please Enter Your Username To Log In"
     const form = document.createElement("form")
+    form.className = "login"
     form.innerHTML = `
         <label for="username">Username: </label>
         <input type="text" name="username"><br>
@@ -40,7 +42,7 @@ function renderUser(user) {
     container.innerHTML = ''
     const userName = document.createElement("h2")
     userName.className = "username"
-    userName.innerText = `${user.username}`
+    userName.innerText = `Welcome ${user.username}`
     container.appendChild(userName)
     const exams = document.createElement("div")
     exams.className = "exam-container"
@@ -56,7 +58,7 @@ function renderUser(user) {
     adapter.getUsersExams(user).then(renderExamsList)
     const newExamButton = document.createElement("div")
     newExamButton.className = "button"
-    newExamButton.innerText = "Take a new Exam"
+    newExamButton.innerText = "Take a new Water Treatment Exam"
     container.appendChild(newExamButton)
     newExamButton.addEventListener("click", () => createTypes(user))
 }
