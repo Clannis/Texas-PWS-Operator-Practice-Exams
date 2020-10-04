@@ -50,8 +50,8 @@ function renderUser(user) {
     const examTitle = document.createElement("h3")
     examTitle.innerText = "Your Exams"
     const line = document.createElement("hr")
-    container.appendChild(line)
     exams.appendChild(examTitle)
+    exams.appendChild(line)
     const examList = document.createElement("ul")
     examList.className = "exam-list"
     exams.appendChild(examList)
