@@ -76,6 +76,7 @@ div.right-column {
 
 .top-right {
     background-color: firebrick;
+    display: inline;
     
 }
 
@@ -478,4 +479,26 @@ footer {
 
 .welcome, .login {
     text-align: center;
+}
+
+#myProgress {
+    width: 90%;
+    background-color: grey;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+  
+#myBar {
+    width: 0%;
+    height: 30px;
+    background-color: green;
+}
+
+#myProgress div.label {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

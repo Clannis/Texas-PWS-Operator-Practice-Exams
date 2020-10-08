@@ -169,6 +169,10 @@ function renderExam(exam) {
             </div>
             <div class="top-right right-column">
                 <h1>Test Time Progress</h1>
+                <div id="myProgress">
+                    <div class="label">03:00:00 Remaining</div>
+                    <div id="myBar"></div>
+                </div>
             </div>
         </div>
         <div class="row2">
@@ -189,6 +193,36 @@ function renderExam(exam) {
     `
     renderSideNav(exam)
     selectQuestion(exam, exam.currentQuestion)
+    renderProgressBar()
+}
+
+function renderProgressBar() {
+    i = 1;
+    const elem = document.getElementById("myBar");
+    let width = 0;
+    let id = setInterval(frame, 1080);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+        } else {
+            width = width + .01;
+            elem.style.width = width + "%";
+        }
+    }
+    const label = document.querySelector(".label");
+    let time = 10800
+    let timeId = setInterval(timeUp, 1000);
+    function timeUp() {
+        if (time <= 0) {
+            clearInterval(timeId)
+            i = 0
+        } else {
+            time = time - 1
+            
+            label.innerText = new Date(time * 1000).toISOString().substr(11, 8) + " Remaining"
+        }
+    }
 }
 
 function selectQuestion(exam, index) {
