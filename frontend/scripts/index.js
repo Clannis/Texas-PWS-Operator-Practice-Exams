@@ -17,7 +17,7 @@ function renderLogIn() {
     tceqImage.className = "tceq"
     imgDiv.appendChild(tceqImage)
     const testingHeading = document.createElement("h1")
-    testingHeading.innerText = "Practice Testing"
+    testingHeading.innerHTML = "TCEQ Occupational Licensing<br>Practice Testing"
     testingHeading.className = "testing-head"
     imgDiv.appendChild(testingHeading)
     const twuaImage = document.createElement("img")
@@ -56,7 +56,7 @@ function renderUser(user) {
     container.innerHTML = ''
     const userName = document.createElement("h2")
     userName.className = "username"
-    userName.innerText = `Welcome ${user.username}`
+    userName.innerText = `Welcome, ${user.username}.`
     container.appendChild(userName)
     const exams = document.createElement("div")
     exams.className = "exam-container"

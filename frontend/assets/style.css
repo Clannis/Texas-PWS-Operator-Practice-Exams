@@ -7,7 +7,7 @@ html, body {
 div.container {
     float: left;
     height: 93vh;
-    background-image: linear-gradient(rgb(244, 248, 185), rgb(87, 87, 61));
+    background-image: linear-gradient(rgb(253, 255, 230), rgb(65, 65, 38));
     width: 100%;
 }
 
@@ -19,6 +19,9 @@ div.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
 }
 
 .tceq {
@@ -32,6 +35,7 @@ div.container {
     text-shadow: 2px 2px 5px rgb(163, 23, 23);
     text-decoration: underline;
     font-size: 2.5em;
+    text-align: center;
 }
 
 .twua {
@@ -92,14 +96,15 @@ ul.exam-list {
 }
 
 li.exam-card {
-    background-color: darkolivegreen;
-    border-color: black;
+    background-color: rgb(129, 133, 136);
+    border-color: #000000;
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
     text-align: center;
+    box-shadow: 5px 5px 5px #000000;
 }
 
 .button {
@@ -127,7 +132,7 @@ li.exam-card {
     border: black;
     border-width: 1px;
     border-style: solid;
-    background-color: beige;
+    background-color: rgb(196, 196, 176);
     border-radius: 15px;
     width: fit-content;
     padding: 4px;
@@ -140,7 +145,7 @@ li.exam-card {
     border: black;
     border-width: 1px;
     border-style: solid;
-    background-color: beige;
+    background-color: rgb(196, 196, 176);
     border-radius: 10px;
     width: fit-content;
     padding: 4px;
@@ -150,9 +155,15 @@ li.exam-card {
 
 footer {
     background-color: rgb(44, 135, 196);
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
-    float: left;
+    /* float: left; */
+    /* position: absolute; */
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .exam-types {
