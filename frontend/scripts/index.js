@@ -1,5 +1,5 @@
-const EXAMTYPES = ["Water Treatment", "Wastewater Treatment"]
-const EXAMLICENSES = ["D", "C", "B"]
+const EXAMTYPES = ["Water Treatment"]
+const EXAMLICENSES = ["D", "C"]
 let USER = ""
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -56,7 +56,7 @@ function renderUser(user) {
     container.innerHTML = ''
     const userName = document.createElement("h2")
     userName.className = "username"
-    userName.innerText = `${user.username}`
+    userName.innerText = `Welcome ${user.username}`
     container.appendChild(userName)
     const exams = document.createElement("div")
     exams.className = "exam-container"
@@ -64,15 +64,15 @@ function renderUser(user) {
     const examTitle = document.createElement("h3")
     examTitle.innerText = "Your Exams"
     const line = document.createElement("hr")
-    container.appendChild(line)
     exams.appendChild(examTitle)
+    exams.appendChild(line)
     const examList = document.createElement("ul")
     examList.className = "exam-list"
     exams.appendChild(examList)
     adapter.getUsersExams(user).then(renderExamsList)
     const newExamButton = document.createElement("div")
     newExamButton.className = "button"
-    newExamButton.innerText = "Take a new Exam"
+    newExamButton.innerText = "Take a new Water Treatment Exam"
     container.appendChild(newExamButton)
     newExamButton.addEventListener("click", () => createTypes(user))
 }
