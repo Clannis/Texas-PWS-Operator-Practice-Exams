@@ -193,34 +193,31 @@ function renderExam(exam) {
     `
     renderSideNav(exam)
     selectQuestion(exam, exam.currentQuestion)
-    renderProgressBar()
+    renderProgressBar(exam)
 }
 
-function renderProgressBar() {
-    i = 1;
+function renderProgressBar(exam) {
     const elem = document.getElementById("myBar");
-    let width = 0;
+    let width = (10800 - exam.time)/100;
     let id = setInterval(frame, 1080);
     function frame() {
         if (width >= 100) {
             clearInterval(id);
-            i = 0;
         } else {
             width = width + .01;
             elem.style.width = width + "%";
         }
     }
     const label = document.querySelector(".label");
-    let time = 10800
+    let time = exam.time
     let timeId = setInterval(timeUp, 1000);
     function timeUp() {
         if (time <= 0) {
             clearInterval(timeId)
-            i = 0
         } else {
             time = time - 1
-            
             label.innerText = new Date(time * 1000).toISOString().substr(11, 8) + " Remaining"
+            exam.time = time
         }
     }
 }

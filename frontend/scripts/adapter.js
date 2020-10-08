@@ -51,7 +51,8 @@ const adapter = {
         id: exam.id,
         user_id: exam.userId,
         current_question: exam.currentQuestion,
-        questions: []
+        questions: [],
+        time: exam.time
       }
     }
 
@@ -82,7 +83,8 @@ const adapter = {
         id: exam.id,
         user_id: exam.userId,
         current_question: exam.currentQuestion,
-        questions: []
+        questions: [],
+        time: exam.time
       }
     }
 

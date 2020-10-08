@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_032139) do
     t.integer "grade"
     t.boolean "completed", default: false
     t.integer "current_question", default: 0
-    t.integer "time"
+    t.integer "time", default: 10800
     t.index ["user_id"], name: "index_exams_on_user_id"
   end
 

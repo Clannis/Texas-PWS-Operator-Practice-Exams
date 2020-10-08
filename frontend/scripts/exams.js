@@ -13,6 +13,7 @@ class Exam {
         })
         this.completed = examHash.completed
         this.currentQuestion = examHash.current_question
+        this.time = examHash.time
     }
 
     started() {
