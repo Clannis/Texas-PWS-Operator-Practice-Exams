@@ -155,11 +155,7 @@ li.exam-card {
 
 footer {
     background-color: rgb(44, 135, 196);
-    /* width: 100%; */
     text-align: center;
-    /* float: left; */
-    /* position: absolute; */
-
     position: fixed;
     left: 0;
     bottom: 0;
