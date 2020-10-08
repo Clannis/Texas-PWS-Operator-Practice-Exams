@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_25_151742) do
+ActiveRecord::Schema.define(version: 2020_10_08_032139) do
 
   create_table "answers", force: :cascade do |t|
     t.string "correct_answer"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_09_25_151742) do
     t.integer "grade"
     t.boolean "completed", default: false
     t.integer "current_question", default: 0
+    t.integer "time"
     t.index ["user_id"], name: "index_exams_on_user_id"
   end
 
