@@ -9,11 +9,27 @@ document.addEventListener("DOMContentLoaded", () => {
 function renderLogIn() {
     const container = document.querySelector("div.container")
     container.innerHTML = ''
+    const imgDiv = document.createElement("div")
+    imgDiv.className = "img-container"
+    container.appendChild(imgDiv)
+    const tceqImage = document.createElement("img")
+    tceqImage.src = "https://www.tceq.texas.gov/@@site-logo/TCEQ-1072x1072.png"
+    tceqImage.className = "tceq"
+    imgDiv.appendChild(tceqImage)
+    const testingHeading = document.createElement("h1")
+    testingHeading.innerText = "Practice Testing"
+    testingHeading.className = "testing-head"
+    imgDiv.appendChild(testingHeading)
+    const twuaImage = document.createElement("img")
+    twuaImage.src = "https://members.twua.org/browsertest/Images/TWUA_Logo.png"
+    twuaImage.className = "twua"
+    imgDiv.appendChild(twuaImage)
     const formTitle = document.createElement("h2")
+    formTitle.className = "login"
     formTitle.innerText = "Please Enter Your Username"
     const form = document.createElement("form")
+    form.className = "login"
     form.innerHTML = `
-        <label for="username">Username: </label>
         <input type="text" name="username"><br>
         <input type="submit" value="Submit">
     `

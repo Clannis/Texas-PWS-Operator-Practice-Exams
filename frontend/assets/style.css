@@ -7,8 +7,37 @@ html, body {
 div.container {
     float: left;
     height: 93vh;
-    background-color: rgb(124, 120, 118);
+    background-image: linear-gradient(rgb(244, 248, 185), rgb(87, 87, 61));
     width: 100%;
+}
+
+.login {
+    text-align: center;
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tceq {
+    height: 250px;
+    width: 250px;
+    text-align: left;
+}
+
+.testing-head {
+    color: rgb(33, 72, 146);
+    text-shadow: 2px 2px 5px rgb(163, 23, 23);
+    text-decoration: underline;
+    font-size: 2.5em;
+}
+
+.twua {
+    height: 250px;
+    width: 250px;
+    text-align: right;
 }
 
 div.row1 {
