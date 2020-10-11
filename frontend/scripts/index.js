@@ -168,7 +168,7 @@ function renderExam(exam) {
                 <h1 class="exam-title">${exam.field} - Class ${exam.license}</h1>
             </div>
             <div class="top-right right-column">
-                <h1>Test Time Progress</h1>
+                <h1>Exam Time Progress</h1>
                 <div id="myProgress">
                     <div class="label">03:00:00 Remaining</div>
                     <div id="myBar"></div>
