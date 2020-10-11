@@ -343,6 +343,7 @@ function renderQuestionsModal(exam) {
         questionNumberList.appendChild(questionNumber)
 
         questionNumber.addEventListener("click", () => {
+            exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
             const navButtons = document.querySelector(".nav-buttons")
             navButtons.parentNode.removeChild(navButtons)
             modal.style.display = "none";
