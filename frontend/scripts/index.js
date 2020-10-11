@@ -331,13 +331,17 @@ function renderSubmitModal(exam) {
     const message = document.createElement("p")
     message.className = "confirm-message"
     message.innerText = "Make sure you have answered all of the questions."
+    const buttonDiv = document.createElement("div")
+    buttonDiv.className = "confirm-buttton-list"
+
     const goBack = document.createElement("div")
     goBack.className = "confirm-button"
     goBack.innerText = "Go Back"
     const submit = document.createElement("div")
     submit.className = "confirm-button"
     submit.innerText = "Submit"
-    content.append(confirm, message, goBack, submit)
+    content.append(confirm, message, buttonDiv)
+    buttonDiv.append(goBack, submit)
     goBack.addEventListener("click", () => {
         modal.style.display = "none";
         confirm.parentNode.removeChild(confirm)

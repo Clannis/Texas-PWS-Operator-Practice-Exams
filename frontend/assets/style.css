@@ -503,8 +503,9 @@ footer {
     transform: translate(-50%, -50%);
 }
 
-.confirm-message {
+.confirm-button-list {
     text-align: center;
+    width: 75%;
 }
 
 .confirm-button {
@@ -516,10 +517,9 @@ footer {
     width: 125px;
     text-align: center;
     color: blanchedalmond;
-    display: inline-flex;
-    position: relative;
     padding: 10px;
     margin-right: 50px;
+    display: inline-block;
 }
 
 .confirm-button:hover {
