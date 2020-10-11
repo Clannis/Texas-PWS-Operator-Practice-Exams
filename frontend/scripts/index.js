@@ -317,12 +317,66 @@ function renderSideNav(exam) {
     submitButton.innerText = "Submit & Grade"
     submitContainer.appendChild(submitButton)
     submitButton.addEventListener("click", () => {
+        renderSubmitModal(exam)
+    })
+}
+
+function renderSubmitModal(exam) {
+    const modal = document.querySelector(".modal")
+    modal.style.display = "block"
+    const content = document.querySelector(".modal-content")
+    const confirm = document.createElement("h3")
+    confirm.className = "confirm-message"
+    confirm.innerText = "Are you sure you want to Submit and Grade the exam?"
+    const message = document.createElement("p")
+    message.className = "confirm-message"
+    message.innerText = "Make sure you have answered all of the questions."
+    const goBack = document.createElement("div")
+    goBack.className = "confirm-button"
+    goBack.innerText = "Go Back"
+    const submit = document.createElement("div")
+    submit.className = "confirm-button"
+    submit.innerText = "Submit"
+    content.append(confirm, message, goBack, submit)
+    goBack.addEventListener("click", () => {
+        modal.style.display = "none";
+        confirm.parentNode.removeChild(confirm)
+        message.parentNode.removeChild(message)
+        goBack.parentNode.removeChild(goBack)
+        submit.parentNode.removeChild(submit)
+    })
+    submit.addEventListener("click", () => {
+        modal.style.display = "none";
+        confirm.parentNode.removeChild(confirm)
+        message.parentNode.removeChild(message)
+        goBack.parentNode.removeChild(goBack)
+        submit.parentNode.removeChild(submit)
         exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
         adapter.submitExam(exam)
         .then((data) => {
             exam = new Exam(data)
             renderExamResults(exam)
         })
+    })
+
+    const span = document.querySelector(".close")
+
+    span.addEventListener("click",() => {
+        modal.style.display = "none";
+        confirm.parentNode.removeChild(confirm)
+        message.parentNode.removeChild(message)
+        goBack.parentNode.removeChild(goBack)
+        submit.parentNode.removeChild(submit)
+    })
+
+    window.addEventListener("click", (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            confirm.parentNode.removeChild(confirm)
+            message.parentNode.removeChild(message)
+            goBack.parentNode.removeChild(goBack)
+            submit.parentNode.removeChild(submit)
+        }
     })
 }
 
