@@ -199,6 +199,7 @@ function renderExam(exam) {
 function renderProgressBar(exam) {
     const elem = document.getElementById("myBar");
     let width = (10800 - exam.time)/100;
+    elem.style.width = width + "%";
     let id = setInterval(frame, 1080);
     function frame() {
         if (width >= 100) {
@@ -210,10 +211,17 @@ function renderProgressBar(exam) {
     }
     const label = document.querySelector(".label");
     let time = exam.time
+    label.innerText = new Date(time * 1000).toISOString().substr(11, 8) + " Remaining"
     let timeId = setInterval(timeUp, 1000);
     function timeUp() {
         if (time <= 0) {
-            clearInterval(timeId)
+            exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
+            adapter.submitExam(exam)
+            .then((data) => {
+                exam = new Exam(data)
+                renderExamResults(exam)
+                clearInterval(timeId)
+            })
         } else {
             time = time - 1
             label.innerText = new Date(time * 1000).toISOString().substr(11, 8) + " Remaining"
