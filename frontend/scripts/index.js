@@ -72,7 +72,7 @@ function renderUser(user) {
     adapter.getUsersExams(user).then(renderExamsList)
     const newExamButton = document.createElement("div")
     newExamButton.className = "button"
-    newExamButton.innerText = "Take a new Water Treatment Exam"
+    newExamButton.innerText = "Take a new Exam"
     container.appendChild(newExamButton)
     newExamButton.addEventListener("click", () => createTypes(user))
 }

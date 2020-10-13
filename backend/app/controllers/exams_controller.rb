@@ -30,7 +30,7 @@ class ExamsController < ApplicationController
 
     def update
         @exam = Exam.find_by(id: params[:exam][:id])
-        @exam.update(current_question: params[:exam][:current_question])
+        @exam.update(current_question: params[:exam][:current_question], time: params[:exam][:time])
         params[:exam][:questions].each do |param_question|
             question = ExamQuestion.find_by(id: param_question[:id])
             question.update(id: param_question[:id], selected_answer: param_question[:selected_answer])
