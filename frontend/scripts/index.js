@@ -265,7 +265,7 @@ function renderQuestion(exam, question, index) {
     const previousButton = document.createElement("div")
     if (index !== 0) {
         previousButton.className = "previous"
-        previousButton.innerText = "Save & Previous"
+        previousButton.innerText = "Previous"
         navButtons.appendChild(previousButton)
         previousButton.addEventListener("click", () => {
             question.selectedAnswer = document.forms[0].elements["selectedAnswer"].value
@@ -279,7 +279,7 @@ function renderQuestion(exam, question, index) {
     }
     if (index !== 49) {
         nextButton.className = "next"
-        nextButton.innerText = "Save & Next"
+        nextButton.innerText = "Next"
         navButtons.appendChild(nextButton)
         nextButton.addEventListener("click", () => {
             question.selectedAnswer = document.forms[0].elements["selectedAnswer"].value
