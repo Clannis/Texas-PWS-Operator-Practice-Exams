@@ -200,12 +200,12 @@ function renderProgressBar(exam) {
     const elem = document.getElementById("myBar");
     let width = (10800 - exam.time)/100;
     elem.style.width = width + "%";
-    let id = setInterval(frame, 1080);
+    let id = setInterval(frame, 10800);
     function frame() {
         if (width >= 100) {
             clearInterval(id);
         } else {
-            width = width + .01;
+            width = width + .1;
             elem.style.width = width + "%";
         }
     }
@@ -216,6 +216,7 @@ function renderProgressBar(exam) {
     function timeUp() {
         if (time <= 0) {
             exam.questions[exam.currentQuestion].selectedAnswer = document.forms[0].elements["selectedAnswer"].value
+            exam.time = time
             adapter.submitExam(exam)
             .then((data) => {
                 exam = new Exam(data)
