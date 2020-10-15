@@ -89,7 +89,7 @@ function renderExamListItem(exam) {
     const li = document.createElement("li")
     li.classList.add("exam-card")
     li.innerHTML = `
-        <p><strong>${exam.field} - Class ${exam.license}</strong></p>
+        <p><strong>${exam.field} - ${exam.license}</strong></p>
         `
     if (exam.completed) {
         li.innerHTML += `<p>Grade: ${exam.grade}% out of 100%</p>`
