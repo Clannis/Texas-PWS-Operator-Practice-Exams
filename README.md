@@ -8,7 +8,6 @@ This web application is intended to be used by Texas PWS Operators for State exa
 ---
 
 ### Dependencies
----
 Use bundle install to install all dependencies
 
 ```
@@ -21,7 +20,6 @@ This application was produced using:
 * Sqlite3 version 1.4
 
 ### Testing
----
 To test this application, please install all dependencies as instructed above and run `rails s` to launch the local server.
 Then navigate to http://localhost:3000 to load the app and begin exploration/testing of the application.
 
