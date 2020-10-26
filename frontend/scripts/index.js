@@ -507,6 +507,38 @@ function renderExamResults(exam) {
     resultsGrade.innerHTML = `You Scored: <u>${exam.grade}%</u> Out Of 100%<hr>`
     container.appendChild(resultsGrade)
 
+    const search = document.createElement("form")
+    search.innerHTML = `
+        <input name="search" type="text" />
+        <input type="submit" />
+    `
+    container.appendChild(search)
+
+    search.addEventListener("submit", (e) => {
+        e.preventDefault()
+        const searchTerm = e.target.search.value
+        const questions = exam.questions.filter(question => question.prompt.includes(searchTerm))
+        const questionUl = document.querySelector(".question-list")
+        questionUl.innerHTML = ""
+        for (let key in questions) {
+            const questionNumber = document.createElement("li")
+            questionNumber.className = "question-end"
+            if (questions[key].correct) {
+                questionNumber.className += " correct"
+            } else {
+                questionNumber.className += " wrong"
+            }
+            
+            questionNumber.innerText = parseInt(key) + 1
+            questionUl.appendChild(questionNumber)
+    
+            questionNumber.addEventListener("click", () => {
+                renderQuestionModal(questions[key])
+            })
+        }
+    })
+
+
     const questionsContainer = document.createElement("div")
     container.appendChild(questionsContainer)
 
