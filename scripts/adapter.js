@@ -1,4 +1,4 @@
-const API = "https://texas-pws-practice-exam.heroku-app.com/"
+const API = "https://texas-pws-practice-exam.heroku-app.com"
 
 const adapter = {
 
